@@ -1,0 +1,94 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You find a book titled \"How to Prepare for Active Conflict\" and leaf through it."
+		},
+		{
+			"condition": "",
+			"definition": "1653636214-648",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You learn that crossing your windows with duct tape may make them sturdier!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653636214-648",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You learn that, in case of nearby conflict, having you gas valve on may put you in danger!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653636214-648",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You learn that always keeping your passport and other important documents on you is a good idea!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653636214-648",
+			"event_id": "dialogic_012",
+			"value": "3"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You learn that, with the right equipment, a car battery can be used to power your house!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653636214-648",
+			"event_id": "dialogic_012",
+			"value": "4"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Advice 4"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2",
+		"file": "timeline-1649998878.json",
+		"name": "LibraryAdvice"
+	}
+}

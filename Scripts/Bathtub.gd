@@ -6,14 +6,11 @@ var canTrigger = false
 var isFull = false
 
 func _process(delta):
-	if canTrigger:
+	if canTrigger and !isFull:
 		if Input.is_action_just_pressed("interact"):
-			if isFull:
-				animation.play("empty")
-				isFull = false
-			else:
-				animation.play("fill")
-				isFull = true
+			animation.play("fill")
+			AudioManager.play("res://Assets/Audio/water.ogg")
+			isFull = true
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
@@ -27,7 +24,4 @@ func _on_Area2D_body_exited(body):
 
 func _on_AnimatedSprite_animation_finished():
 	animation.stop()
-	if animation.animation == "fill":
-		animation.frame = 6
-	else:
-		animation.frame = 8
+	animation.frame = 7

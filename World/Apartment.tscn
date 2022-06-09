@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Effects/DayNightCycle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Spritesheets/5_Classroom_and_library_32x32.png" type="Texture" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/UI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Apartment.gd" type="Script" id=13]
+[ext_resource path="res://Prefabs/Library.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Television.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Computer_sprite.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -788,6 +791,135 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 63/shapes = [  ]
 63/z_index = 0
 
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 64, 48, 0, 48, 0, 16, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 64, 80, 0, 80, 0, 32, 64, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( 32, 80, 0, 80, 0, 32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 96, 96, 0, 96, 0, 16, 96, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+points = PoolVector2Array( 160, 80, 32, 80, 32, 16, 160, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+points = PoolVector2Array( 64, 32, 0, 32, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 64, 32, 0, 32, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( 64, 48, 0, 48, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 80, 48, 16, 48, 16, 16, 80, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=60]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=57]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 48, 80, 16, 80, 16, 48, 48, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 48, 80, 16, 80, 16, 48, 48, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 0, 48, 32, 48, 32, 80, 0, 80 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 64, 48, 32, 48, 32, 16, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 64, 80, 0, 80, 0, 16, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+points = PoolVector2Array( 64, 80, 0, 80, 0, 16, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 32, 80, 0, 80, 0, 64, 32, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=61]
+points = PoolVector2Array( 64, 80, 0, 80, 0, 16, 64, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=65]
+points = PoolVector2Array( 48, 96, 0, 96, 0, 32, 48, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=69]
+points = PoolVector2Array( 112, 80, 0, 80, 0, 48, 112, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=70]
+points = PoolVector2Array( 32, 48, 16, 48, 16, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=67]
+points = PoolVector2Array( 23.8056, 19.9375, 64, 16, 64, 64, 22.4167, 62.9932 )
+
+[sub_resource type="ConvexPolygonShape2D" id=68]
+points = PoolVector2Array( 38.5, 62.7709, 0, 64, 0, 16, 38.5, 15.5486 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 64, 80, 0, 80, 0, 32, 64, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=66]
+points = PoolVector2Array( 96, 48, 0, 48, 0, 0, 96, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=75]
+points = PoolVector2Array( 80, 80, 16, 80, 16, 0, 80, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=71]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=72]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=76]
+points = PoolVector2Array( 32, 80, 0, 80, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=73]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=74]
+points = PoolVector2Array( 128, 16, 0, 16, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=41]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 96, 0, 96 )
+
+[sub_resource type="ConvexPolygonShape2D" id=77]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=78]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 16, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( 48, 80, 16, 80, 16, 32, 48, 32 )
+
 [sub_resource type="TileSet" id=15]
 4/name = "3_Bathroom_32x32.png 4"
 4/texture = ExtResource( 5 )
@@ -813,9 +945,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 40 )
 5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 40 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 5/z_index = 0
 6/name = "3_Bathroom_32x32.png 6"
 6/texture = ExtResource( 5 )
@@ -827,9 +966,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 41 )
 6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 41 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 6/z_index = 0
 7/name = "3_Bathroom_32x32.png 7"
 7/texture = ExtResource( 5 )
@@ -841,9 +987,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 42 )
 7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 42 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 7/z_index = 0
 8/name = "3_Bathroom_32x32.png 8"
 8/texture = ExtResource( 5 )
@@ -897,9 +1050,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 43 )
 11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 43 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 11/z_index = 0
 12/name = "3_Bathroom_32x32.png 12"
 12/texture = ExtResource( 5 )
@@ -925,9 +1085,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 13/navigation_offset = Vector2( 0, 0 )
 13/shape_offset = Vector2( 0, 0 )
 13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape = SubResource( 36 )
 13/shape_one_way = false
-13/shape_one_way_margin = 0.0
-13/shapes = [  ]
+13/shape_one_way_margin = 1.0
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 36 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 13/z_index = 0
 14/name = "3_Bathroom_32x32.png 14"
 14/texture = ExtResource( 5 )
@@ -939,9 +1106,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 14/navigation_offset = Vector2( 0, 0 )
 14/shape_offset = Vector2( 0, 0 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape = SubResource( 37 )
 14/shape_one_way = false
-14/shape_one_way_margin = 0.0
-14/shapes = [  ]
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 37 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 14/z_index = 0
 15/name = "3_Bathroom_32x32.png 15"
 15/texture = ExtResource( 5 )
@@ -953,9 +1127,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 15/navigation_offset = Vector2( 0, 0 )
 15/shape_offset = Vector2( 0, 0 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape = SubResource( 44 )
 15/shape_one_way = false
-15/shape_one_way_margin = 0.0
-15/shapes = [  ]
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 44 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 15/z_index = 0
 16/name = "3_Bathroom_32x32.png 16"
 16/texture = ExtResource( 5 )
@@ -967,9 +1148,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 0, 0 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape = SubResource( 38 )
 16/shape_one_way = false
-16/shape_one_way_margin = 0.0
-16/shapes = [  ]
+16/shape_one_way_margin = 1.0
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 38 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 16/z_index = 0
 17/name = "3_Bathroom_32x32.png 17"
 17/texture = ExtResource( 5 )
@@ -981,9 +1169,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 17/navigation_offset = Vector2( 0, 0 )
 17/shape_offset = Vector2( 0, 0 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape = SubResource( 39 )
 17/shape_one_way = false
-17/shape_one_way_margin = 0.0
-17/shapes = [  ]
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 17/z_index = 0
 18/name = "3_Bathroom_32x32.png 18"
 18/texture = ExtResource( 5 )
@@ -1009,9 +1204,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape = SubResource( 48 )
 19/shape_one_way = false
-19/shape_one_way_margin = 0.0
-19/shapes = [  ]
+19/shape_one_way_margin = 1.0
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 48 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 19/z_index = 0
 20/name = "4_Bedroom_32x32.png 20"
 20/texture = ExtResource( 6 )
@@ -1023,9 +1225,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape = SubResource( 45 )
 20/shape_one_way = false
-20/shape_one_way_margin = 0.0
-20/shapes = [  ]
+20/shape_one_way_margin = 1.0
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 45 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 20/z_index = 0
 21/name = "4_Bedroom_32x32.png 21"
 21/texture = ExtResource( 6 )
@@ -1037,9 +1246,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape = SubResource( 46 )
 21/shape_one_way = false
-21/shape_one_way_margin = 0.0
-21/shapes = [  ]
+21/shape_one_way_margin = 1.0
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 46 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 21/z_index = 0
 22/name = "4_Bedroom_32x32.png 22"
 22/texture = ExtResource( 6 )
@@ -1051,9 +1267,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 0, 0 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape = SubResource( 47 )
 22/shape_one_way = false
-22/shape_one_way_margin = 0.0
-22/shapes = [  ]
+22/shape_one_way_margin = 1.0
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 22/z_index = 0
 23/name = "1_Generic_32x32.png 23"
 23/texture = ExtResource( 7 )
@@ -1135,9 +1358,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 28/navigation_offset = Vector2( 0, 0 )
 28/shape_offset = Vector2( 0, 0 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape = SubResource( 49 )
 28/shape_one_way = false
-28/shape_one_way_margin = 0.0
-28/shapes = [  ]
+28/shape_one_way_margin = 1.0
+28/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 49 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 28/z_index = 0
 29/name = "1_Generic_32x32.png 29"
 29/texture = ExtResource( 7 )
@@ -1149,9 +1379,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 29/navigation_offset = Vector2( 0, 0 )
 29/shape_offset = Vector2( 0, 0 )
 29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape = SubResource( 59 )
 29/shape_one_way = false
-29/shape_one_way_margin = 0.0
-29/shapes = [  ]
+29/shape_one_way_margin = 1.0
+29/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 59 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 29/z_index = 0
 30/name = "1_Generic_32x32.png 30"
 30/texture = ExtResource( 7 )
@@ -1163,9 +1400,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 30/navigation_offset = Vector2( 0, 0 )
 30/shape_offset = Vector2( 0, 0 )
 30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape = SubResource( 60 )
 30/shape_one_way = false
-30/shape_one_way_margin = 0.0
-30/shapes = [  ]
+30/shape_one_way_margin = 1.0
+30/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 60 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 30/z_index = 0
 31/name = "1_Generic_32x32.png 31"
 31/texture = ExtResource( 7 )
@@ -1177,9 +1421,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 31/navigation_offset = Vector2( 0, 0 )
 31/shape_offset = Vector2( 0, 0 )
 31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape = SubResource( 57 )
 31/shape_one_way = false
-31/shape_one_way_margin = 0.0
-31/shapes = [  ]
+31/shape_one_way_margin = 1.0
+31/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 57 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 31/z_index = 0
 32/name = "1_Generic_32x32.png 32"
 32/texture = ExtResource( 7 )
@@ -1191,9 +1442,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 32/navigation_offset = Vector2( 0, 0 )
 32/shape_offset = Vector2( 0, 0 )
 32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape = SubResource( 58 )
 32/shape_one_way = false
-32/shape_one_way_margin = 0.0
-32/shapes = [  ]
+32/shape_one_way_margin = 1.0
+32/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 58 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 32/z_index = 0
 33/name = "1_Generic_32x32.png 33"
 33/texture = ExtResource( 7 )
@@ -1205,9 +1463,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 33/navigation_offset = Vector2( 0, 0 )
 33/shape_offset = Vector2( 0, 0 )
 33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape = SubResource( 56 )
 33/shape_one_way = false
-33/shape_one_way_margin = 0.0
-33/shapes = [  ]
+33/shape_one_way_margin = 1.0
+33/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 33/z_index = 0
 34/name = "1_Generic_32x32.png 34"
 34/texture = ExtResource( 7 )
@@ -1219,9 +1484,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 34/navigation_offset = Vector2( 0, 0 )
 34/shape_offset = Vector2( 0, 0 )
 34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape = SubResource( 55 )
 34/shape_one_way = false
-34/shape_one_way_margin = 0.0
-34/shapes = [  ]
+34/shape_one_way_margin = 1.0
+34/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 55 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 34/z_index = 0
 35/name = "1_Generic_32x32.png 35"
 35/texture = ExtResource( 7 )
@@ -1233,9 +1505,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 35/navigation_offset = Vector2( 0, 0 )
 35/shape_offset = Vector2( 0, 0 )
 35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape = SubResource( 53 )
 35/shape_one_way = false
-35/shape_one_way_margin = 0.0
-35/shapes = [  ]
+35/shape_one_way_margin = 1.0
+35/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 35/z_index = 0
 36/name = "1_Generic_32x32.png 36"
 36/texture = ExtResource( 7 )
@@ -1247,9 +1526,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 36/navigation_offset = Vector2( 0, 0 )
 36/shape_offset = Vector2( 0, 0 )
 36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape = SubResource( 51 )
 36/shape_one_way = false
-36/shape_one_way_margin = 0.0
-36/shapes = [  ]
+36/shape_one_way_margin = 1.0
+36/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 36/z_index = 0
 37/name = "1_Generic_32x32.png 37"
 37/texture = ExtResource( 7 )
@@ -1261,9 +1547,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 37/navigation_offset = Vector2( 0, 0 )
 37/shape_offset = Vector2( 0, 0 )
 37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape = SubResource( 52 )
 37/shape_one_way = false
-37/shape_one_way_margin = 0.0
-37/shapes = [  ]
+37/shape_one_way_margin = 1.0
+37/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 37/z_index = 0
 38/name = "1_Generic_32x32.png 38"
 38/texture = ExtResource( 7 )
@@ -1275,9 +1568,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 38/navigation_offset = Vector2( 0, 0 )
 38/shape_offset = Vector2( 0, 0 )
 38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape = SubResource( 54 )
 38/shape_one_way = false
-38/shape_one_way_margin = 0.0
-38/shapes = [  ]
+38/shape_one_way_margin = 1.0
+38/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 38/z_index = 0
 39/name = "1_Generic_32x32.png 39"
 39/texture = ExtResource( 7 )
@@ -1289,9 +1589,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 39/navigation_offset = Vector2( 0, 0 )
 39/shape_offset = Vector2( 0, 0 )
 39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape = SubResource( 50 )
 39/shape_one_way = false
-39/shape_one_way_margin = 0.0
-39/shapes = [  ]
+39/shape_one_way_margin = 1.0
+39/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 50 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 39/z_index = 0
 40/name = "2_LivingRoom_32x32.png 40"
 40/texture = ExtResource( 8 )
@@ -1303,9 +1610,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 40/navigation_offset = Vector2( 0, 0 )
 40/shape_offset = Vector2( 0, 0 )
 40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape = SubResource( 63 )
 40/shape_one_way = false
-40/shape_one_way_margin = 0.0
-40/shapes = [  ]
+40/shape_one_way_margin = 1.0
+40/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 63 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 40/z_index = 0
 41/name = "2_LivingRoom_32x32.png 41"
 41/texture = ExtResource( 8 )
@@ -1317,9 +1631,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 41/navigation_offset = Vector2( 0, 0 )
 41/shape_offset = Vector2( 0, 0 )
 41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape = SubResource( 64 )
 41/shape_one_way = false
-41/shape_one_way_margin = 0.0
-41/shapes = [  ]
+41/shape_one_way_margin = 1.0
+41/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 64 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 41/z_index = 0
 42/name = "2_LivingRoom_32x32.png 42"
 42/texture = ExtResource( 8 )
@@ -1331,9 +1652,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 42/navigation_offset = Vector2( 0, 0 )
 42/shape_offset = Vector2( 0, 0 )
 42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape = SubResource( 62 )
 42/shape_one_way = false
-42/shape_one_way_margin = 0.0
-42/shapes = [  ]
+42/shape_one_way_margin = 1.0
+42/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 62 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 42/z_index = 0
 43/name = "2_LivingRoom_32x32.png 43"
 43/texture = ExtResource( 8 )
@@ -1345,9 +1673,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 43/navigation_offset = Vector2( 0, 0 )
 43/shape_offset = Vector2( 0, 0 )
 43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape = SubResource( 61 )
 43/shape_one_way = false
-43/shape_one_way_margin = 0.0
-43/shapes = [  ]
+43/shape_one_way_margin = 1.0
+43/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 61 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 43/z_index = 0
 44/name = "4_Bedroom_32x32.png 44"
 44/texture = ExtResource( 6 )
@@ -1373,9 +1708,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 45/navigation_offset = Vector2( 0, 0 )
 45/shape_offset = Vector2( 0, 0 )
 45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape = SubResource( 65 )
 45/shape_one_way = false
-45/shape_one_way_margin = 0.0
-45/shapes = [  ]
+45/shape_one_way_margin = 1.0
+45/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 65 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 45/z_index = 0
 46/name = "14_Basement_32x32.png 46"
 46/texture = ExtResource( 9 )
@@ -1387,9 +1729,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 46/navigation_offset = Vector2( 0, 0 )
 46/shape_offset = Vector2( 0, 0 )
 46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape = SubResource( 69 )
 46/shape_one_way = false
-46/shape_one_way_margin = 0.0
-46/shapes = [  ]
+46/shape_one_way_margin = 1.0
+46/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 69 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 46/z_index = 0
 47/name = "14_Basement_32x32.png 47"
 47/texture = ExtResource( 9 )
@@ -1401,9 +1750,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 47/navigation_offset = Vector2( 0, 0 )
 47/shape_offset = Vector2( 0, 0 )
 47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape = SubResource( 70 )
 47/shape_one_way = false
-47/shape_one_way_margin = 0.0
-47/shapes = [  ]
+47/shape_one_way_margin = 1.0
+47/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 70 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 47/z_index = 0
 48/name = "14_Basement_32x32.png 48"
 48/texture = ExtResource( 9 )
@@ -1415,9 +1771,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 48/navigation_offset = Vector2( 0, 0 )
 48/shape_offset = Vector2( 0, 0 )
 48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape = SubResource( 67 )
 48/shape_one_way = false
-48/shape_one_way_margin = 0.0
-48/shapes = [  ]
+48/shape_one_way_margin = 1.0
+48/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 67 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 48/z_index = 0
 49/name = "14_Basement_32x32.png 49"
 49/texture = ExtResource( 9 )
@@ -1429,9 +1792,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 49/navigation_offset = Vector2( 0, 0 )
 49/shape_offset = Vector2( 0, 0 )
 49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape = SubResource( 68 )
 49/shape_one_way = false
-49/shape_one_way_margin = 0.0
-49/shapes = [  ]
+49/shape_one_way_margin = 1.0
+49/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 68 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 49/z_index = 0
 50/name = "14_Basement_32x32.png 50"
 50/texture = ExtResource( 9 )
@@ -1443,9 +1813,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 50/navigation_offset = Vector2( 0, 0 )
 50/shape_offset = Vector2( 0, 0 )
 50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape = SubResource( 66 )
 50/shape_one_way = false
-50/shape_one_way_margin = 0.0
-50/shapes = [  ]
+50/shape_one_way_margin = 1.0
+50/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 66 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 50/z_index = 0
 51/name = "12_Kitchen_32x32.png 51"
 51/texture = ExtResource( 10 )
@@ -1457,9 +1834,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 51/navigation_offset = Vector2( 0, 0 )
 51/shape_offset = Vector2( 0, 0 )
 51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape = SubResource( 75 )
 51/shape_one_way = false
-51/shape_one_way_margin = 0.0
-51/shapes = [  ]
+51/shape_one_way_margin = 1.0
+51/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 75 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 51/z_index = 0
 52/name = "12_Kitchen_32x32.png 52"
 52/texture = ExtResource( 10 )
@@ -1471,9 +1855,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 52/navigation_offset = Vector2( 0, 0 )
 52/shape_offset = Vector2( 0, 0 )
 52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+52/shape = SubResource( 71 )
 52/shape_one_way = false
-52/shape_one_way_margin = 0.0
-52/shapes = [  ]
+52/shape_one_way_margin = 1.0
+52/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 71 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 52/z_index = 0
 53/name = "12_Kitchen_32x32.png 53"
 53/texture = ExtResource( 10 )
@@ -1485,9 +1876,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 53/navigation_offset = Vector2( 0, 0 )
 53/shape_offset = Vector2( 0, 0 )
 53/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+53/shape = SubResource( 72 )
 53/shape_one_way = false
-53/shape_one_way_margin = 0.0
-53/shapes = [  ]
+53/shape_one_way_margin = 1.0
+53/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 72 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 53/z_index = 0
 54/name = "12_Kitchen_32x32.png 54"
 54/texture = ExtResource( 10 )
@@ -1499,9 +1897,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 54/navigation_offset = Vector2( 0, 0 )
 54/shape_offset = Vector2( 0, 0 )
 54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+54/shape = SubResource( 76 )
 54/shape_one_way = false
-54/shape_one_way_margin = 0.0
-54/shapes = [  ]
+54/shape_one_way_margin = 1.0
+54/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 76 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 54/z_index = 0
 55/name = "12_Kitchen_32x32.png 55"
 55/texture = ExtResource( 10 )
@@ -1513,9 +1918,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 55/navigation_offset = Vector2( 0, 0 )
 55/shape_offset = Vector2( 0, 0 )
 55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape = SubResource( 73 )
 55/shape_one_way = false
-55/shape_one_way_margin = 0.0
-55/shapes = [  ]
+55/shape_one_way_margin = 1.0
+55/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 73 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 55/z_index = 0
 56/name = "12_Kitchen_32x32.png 56"
 56/texture = ExtResource( 10 )
@@ -1541,9 +1953,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 57/navigation_offset = Vector2( 0, 0 )
 57/shape_offset = Vector2( 0, 0 )
 57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+57/shape = SubResource( 74 )
 57/shape_one_way = false
-57/shape_one_way_margin = 0.0
-57/shapes = [  ]
+57/shape_one_way_margin = 1.0
+57/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 74 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 57/z_index = 0
 58/name = "12_Kitchen_32x32.png 58"
 58/texture = ExtResource( 10 )
@@ -1653,9 +2072,16 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 65/navigation_offset = Vector2( 0, 0 )
 65/shape_offset = Vector2( 0, 0 )
 65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape = SubResource( 77 )
 65/shape_one_way = false
-65/shape_one_way_margin = 0.0
-65/shapes = [  ]
+65/shape_one_way_margin = 1.0
+65/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 77 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 65/z_index = 0
 66/name = "12_Kitchen_32x32.png 66"
 66/texture = ExtResource( 10 )
@@ -1685,18 +2111,30 @@ load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250de
 67/shape_one_way_margin = 0.0
 67/shapes = [  ]
 67/z_index = 0
+68/name = "5_Classroom_and_library_32x32.png 68"
+68/texture = ExtResource( 2 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 384, 416, 32, 64 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape = SubResource( 78 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 78 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+68/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 10, 26.5 )
-
-[sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 29, 10 )
-
-[sub_resource type="RectangleShape2D" id=31]
-extents = Vector2( 29.5, 12 )
-
-[sub_resource type="RectangleShape2D" id=36]
-extents = Vector2( 31, 14.5 )
+extents = Vector2( 13.5, 26.5 )
 
 [node name="Apartment" type="Node2D"]
 position = Vector2( 0, -3 )
@@ -1718,7 +2156,7 @@ tile_data = PoolIntArray( 0, 39, 0, 1, 48, 0, 2, 48, 0, 3, 48, 0, 4, 48, 0, 5, 4
 tile_set = SubResource( 15 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 65538, 27, 0, 65542, 46, 0, 65546, 27, 0, 65548, 40, 0, 65551, 61, 0, 65554, 62, 0, 65556, 27, 0, 65559, 54, 0, 131073, 36, 0, 131077, 47, 0, 131087, 58, 0, 131088, 59, 0, 131089, 59, 0, 131090, 60, 0, 131091, 55, 0, 131094, 65, 0, 196623, 57, 0, 262150, 50, 0, 262160, 56, 0, 262165, 56, 0, 393220, 23, 0, 393235, 53, 0, 393236, 51, 0, 393239, 52, 0, 458771, 53, 0, 458775, 52, 0, 524289, 42, 0, 589833, 49, 0, 589835, 28, 0, 589840, 8, 0, 589843, 5, 0, 589846, 14, 0, 655375, 6, 0, 720897, 67, 0, 720900, 40, 0, 720902, 25, 0, 720904, 20, 0, 786449, 18, 0, 851981, 15, 0, 917514, 29, 0, 917518, 7, 0, 917520, 9, 0, 917523, 16, 0, 917524, 10, 0, 983046, 44, 0, 983049, 30, 0, 983053, 30, 0, 983056, 11, 0, 1048577, 21, 0, 1048594, 17, 0, 1114113, 22, 0, 1114135, 13, 0 )
+tile_data = PoolIntArray( 65538, 27, 0, 65542, 46, 0, 65546, 27, 0, 65551, 61, 0, 65554, 62, 0, 65556, 27, 0, 65559, 54, 0, 131073, 36, 0, 131077, 47, 0, 131087, 58, 0, 131088, 59, 0, 131089, 59, 0, 131090, 60, 0, 131091, 55, 0, 131094, 65, 0, 196623, 57, 0, 262150, 50, 0, 262160, 56, 0, 262165, 56, 0, 393220, 23, 0, 393235, 53, 0, 393236, 51, 0, 393239, 52, 0, 458771, 53, 0, 458775, 52, 0, 524289, 42, 0, 589833, 49, 0, 589835, 28, 0, 589840, 8, 0, 589843, 5, 0, 589846, 14, 0, 655375, 6, 0, 720897, 67, 0, 720900, 40, 0, 720902, 25, 0, 720904, 20, 0, 786449, 18, 0, 851981, 15, 0, 917514, 29, 0, 917518, 7, 0, 917520, 9, 0, 917523, 16, 0, 917524, 10, 0, 983046, 44, 0, 983049, 30, 0, 983053, 30, 0, 983056, 11, 0, 1048577, 21, 0, 1048594, 17, 0, 1114113, 22, 0, 1114135, 13, 0 )
 
 [node name="Furniture2" type="TileMap" parent="."]
 tile_set = SubResource( 15 )
@@ -1726,34 +2164,25 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 131087, 66, 0, 131089, 63, 0 )
 
+[node name="Interactive" type="Node2D" parent="."]
+
+[node name="Television" parent="Interactive" instance=ExtResource( 15 )]
+position = Vector2( 257, 67 )
+
+[node name="Library" parent="Interactive" instance=ExtResource( 14 )]
+position = Vector2( 416, 72 )
+
+[node name="Computer" parent="Interactive" instance=ExtResource( 16 )]
+position = Vector2( 64, 397 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 458, 306 )
 
 [node name="Entrance" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance"]
-position = Vector2( 12, 190 )
+position = Vector2( 15.5, 190 )
 shape = SubResource( 16 )
-
-[node name="TV Area" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TV Area"]
-position = Vector2( 258, 113 )
-shape = SubResource( 30 )
-
-[node name="Library" type="Area2D" parent="."]
-position = Vector2( 418, 88 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Library"]
-position = Vector2( -2, 21 )
-shape = SubResource( 31 )
-
-[node name="Computer" type="Area2D" parent="."]
-position = Vector2( 64, 405 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer"]
-position = Vector2( -1, 36.5 )
-shape = SubResource( 36 )
 
 [node name="Bathtub" parent="." instance=ExtResource( 3 )]
 position = Vector2( 576, 379 )
@@ -1772,9 +2201,3 @@ color = Color( 0.768627, 0.698039, 0.560784, 1 )
 [node name="UI" parent="." instance=ExtResource( 12 )]
 
 [connection signal="body_entered" from="Entrance" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="TV Area" to="." method="_on_TV_Area_body_entered"]
-[connection signal="body_exited" from="TV Area" to="." method="_on_TV_Area_body_exited"]
-[connection signal="body_entered" from="Library" to="." method="_on_Library_body_entered"]
-[connection signal="body_exited" from="Library" to="." method="_on_Library_body_exited"]
-[connection signal="body_entered" from="Computer" to="." method="_on_Computer_body_entered"]
-[connection signal="body_exited" from="Computer" to="." method="_on_Computer_body_exited"]

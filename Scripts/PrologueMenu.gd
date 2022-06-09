@@ -9,6 +9,7 @@ var currentLabel = 0
 var maxLabel = 3
 
 func _on_Button_pressed():
+	Music.fade_music_out()
 	get_tree().change_scene(world_scene)
 
 func _process(delta):

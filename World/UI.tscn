@@ -80,6 +80,7 @@ align = 1
 valign = 1
 
 [node name="EventPanel" type="Panel" parent="CanvasLayer"]
+visible = false
 modulate = Color( 1, 1, 1, 0.913725 )
 anchor_left = 0.5
 anchor_right = 0.5

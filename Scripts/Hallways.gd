@@ -8,9 +8,9 @@ func _ready():
 	if GameParameters.lastVisited == "Apartment":
 		player.position = Vector2(304, 157)
 	elif GameParameters.lastVisited == "Outside":
-		player.position = Vector2(224, 585)
+		player.position = Vector2(128, 571)
 	elif GameParameters.lastVisited == "Basement":
-		player.position = Vector2(79, 539)
+		player.position = Vector2(275, 524)
 	
 
 

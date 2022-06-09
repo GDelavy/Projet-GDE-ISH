@@ -212,7 +212,7 @@ position = Vector2( 0, -16 )
 texture = ExtResource( 1 )
 hframes = 24
 vframes = 4
-frame = 39
+frame = 38
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.314972, 7.6235 )
@@ -254,3 +254,8 @@ energy = 0.4
 shadow_enabled = true
 shadow_gradient_length = 3.0
 shadow_filter_smooth = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

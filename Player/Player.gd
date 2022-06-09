@@ -7,6 +7,8 @@ const FRICTION = 1200
 var velocity = Vector2.ZERO
 var canMove = true
 
+onready var timer = $Timer
+onready var audio = $AudioStreamPlayer
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -26,6 +28,11 @@ func _physics_process(delta):
 			animationTree.set("parameters/Idle/blend_position", input_vector)
 			animationTree.set("parameters/Run/blend_position", input_vector)
 			animationState.travel("Run")
+			# Footsteps sounds
+			if timer.time_left <= 0:
+				audio.pitch_scale = rand_range(0.8, 1.2)
+				audio.play()
+				timer.start(0.2)
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			animationState.travel("Idle")

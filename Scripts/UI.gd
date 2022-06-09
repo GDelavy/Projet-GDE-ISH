@@ -61,7 +61,6 @@ func _on_HungerTimer_timeout():
 
 # Fade event panel
 func _on_Timer_timeout():
-	print("a")
 	eventTween.interpolate_property(eventPanel, "modulate",
 				Color(1,1,1,0.91), Color(1,1,1,0), 1.5,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)

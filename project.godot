@@ -51,13 +51,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Projet ISH"
-run/main_scene="res://World/MainMenu.tscn"
+run/main_scene="res://World/Menus/MainMenu.tscn"
 
 [autoload]
 
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 Time="*res://Singletons/Timer.tscn"
 GameParameters="*res://Singletons/Game_parameters.gd"
+AudioManager="*res://Singletons/AudioManager.gd"
 
 [display]
 

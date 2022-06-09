@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/GUI/SimpleBoxDark.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/GUI/Montserrat-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/CreditsMenu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 79
+font_data = ExtResource( 2 )
+
+[node name="CreditsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 960.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 464.0
+margin_right = 250.0
+margin_bottom = 522.0
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 120.0
+margin_top = 216.0
+margin_right = 440.0
+margin_bottom = 408.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ISH" type="Label" parent="Control"]
+margin_top = -56.0
+margin_right = 694.0
+margin_bottom = -35.0
+text = "Project realized as part of the University of Lausanne's Faculty of Arts, ISH section"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Supervisor" type="Label" parent="Control"]
+margin_top = -32.0
+margin_right = 223.0
+margin_bottom = -11.0
+text = "Supervised by Isaac Pante"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Label" parent="Control"]
+margin_left = 136.0
+margin_top = 32.0
+margin_right = 520.0
+margin_bottom = 77.0
+text = "Dialogue System :
+Dialogic Add-on, by Emilio Coppola."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GUI" type="Label" parent="Control"]
+margin_left = 136.0
+margin_top = 96.0
+margin_right = 520.0
+margin_bottom = 141.0
+text = "GUI Theme :
+SimpleBox, by Azagaya"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Visuals" type="Label" parent="Control"]
+margin_left = 136.0
+margin_top = 160.0
+margin_right = 520.0
+margin_bottom = 205.0
+text = "Visual Assets :
+Modern Interiors by LimeZu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

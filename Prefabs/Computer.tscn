@@ -834,9 +834,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Wikipedia" type="Button" parent="StartScreen"]
-margin_left = 145.0
+margin_left = 141.0
 margin_top = 71.0
-margin_right = 242.0
+margin_right = 240.0
 margin_bottom = 153.0
 theme = ExtResource( 4 )
 text = "Wikipedia"
@@ -845,9 +845,9 @@ __meta__ = {
 }
 
 [node name="News" type="Button" parent="StartScreen"]
-margin_left = 40.0
+margin_left = 36.0
 margin_top = 71.0
-margin_right = 136.0
+margin_right = 132.0
 margin_bottom = 153.0
 theme = ExtResource( 4 )
 text = "News"
@@ -856,9 +856,9 @@ __meta__ = {
 }
 
 [node name="Amazon" type="Button" parent="StartScreen"]
-margin_left = 254.0
+margin_left = 250.0
 margin_top = 71.0
-margin_right = 349.0
+margin_right = 345.0
 margin_bottom = 153.0
 theme = ExtResource( 4 )
 text = "Amazon"

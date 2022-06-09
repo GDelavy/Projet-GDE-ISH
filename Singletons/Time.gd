@@ -5,6 +5,9 @@ var danger = 0
 var stress = 0
 var hunger = 0
 
+# Time to countdown in seconds
+var countdownTime = 240
+
 var inventory = {"Food" : 4, "Water" : 2} setget inventory_changed
 
 # Time
@@ -21,6 +24,10 @@ var gameOver = false
 signal isAfternoon
 signal isEvening
 signal isNight
+
+func _ready():
+	# Initialize countdown
+	set_wait_time(countdownTime)
 
 func _process(delta):
 	if !gameOver:

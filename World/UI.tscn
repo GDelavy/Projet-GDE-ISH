@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Effects/DayNightCycle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Computer.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Prefabs/TV.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/GUI/SimpleBox.tres" type="Theme" id=5]
 [ext_resource path="res://Assets/GUI/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/GUI/SimpleBoxDark.tres" type="Theme" id=7]
 
 [sub_resource type="DynamicFont" id=33]
 size = 30
@@ -38,6 +39,36 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id=35]
+resource_name = "Popup"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8, 552 ), Vector2( 8, 488 ) ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8, 552 ) ]
+}
 
 [node name="UI" type="Control"]
 anchor_left = 0.017
@@ -301,6 +332,32 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Popup" type="Panel" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 552.0
+margin_right = 320.0
+margin_bottom = 592.0
+theme = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Popup"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 304.0
+margin_bottom = 32.0
+text = "Bathtub filled up (1/13)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Popup"]
+anims/Popup = SubResource( 35 )
+anims/RESET = SubResource( 36 )
 
 [connection signal="timeout" from="CanvasLayer/EventPanel/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Danger/DangerTimer" to="." method="_on_DangerTimer_timeout"]

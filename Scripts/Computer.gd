@@ -21,10 +21,10 @@ func _on_Wikipedia_pressed():
 	var random = randi()%101
 	if random <= 45:
 		wikiScreenLabel.text = "You find useful information and feel better informed! You relax a little bit."
-		GameParameters.stress -= 15
+		GameParameters.stress -= 10
 	else:
 		wikiScreenLabel.text = "The information you found worries you. Your stress goes up."
-		GameParameters.stress += 20
+		GameParameters.stress += 15
 
 func _on_Amazon_pressed():
 	orderScreen.visible = true

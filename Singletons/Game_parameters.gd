@@ -1,15 +1,15 @@
 extends Node
 
 # Items possessed by player
-var items = {"Food": 5, "Water": 3, "Batteries": 1}
+var items = {"Raw Food": 5, "Water": 3, "Batteries": 1}
 
 var stress = 0 setget modify_stress
 var danger = 0 setget modify_danger
 var hunger = 0 setget modify_hunger
 
 var dangerIncrease = 1
-var stressIncrease = 1
-var hungerIncrease = 1
+var stressIncrease = 1.25
+var hungerIncrease = 1.5
 
 # Whichever advice the player will get
 var adviceId = [0,1,2,3,4]
@@ -33,9 +33,9 @@ func reset_values():
 	danger = 0
 	hunger = 0
 	
-	dangerIncrease = 1
+	dangerIncrease = 0.75
 	stressIncrease = 1
-	hungerIncrease = 1
+	hungerIncrease = 1.5
 	
 	items = {"Food": 5, "Water": 3, "Batteries": 1}
 	

@@ -9,6 +9,7 @@ var isFull = false
 func _process(delta):
 	if canTrigger and !isFull:
 		if Input.is_action_just_pressed("interact"):
+			get_parent().get_parent().get_node("UI").show_popup("Bathtub filled")
 			animation.play("fill")
 			AudioManager.play("res://Assets/Audio/water.ogg")
 			isFull = true

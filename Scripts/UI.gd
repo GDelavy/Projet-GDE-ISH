@@ -3,6 +3,10 @@ extends Control
 onready var eventPanel = $CanvasLayer/EventPanel
 onready var eventTween = $CanvasLayer/EventPanel/Tween
 
+onready var popupPanel = $CanvasLayer/Popup
+onready var populText = $CanvasLayer/Popup/Label
+onready var popupAnim = $CanvasLayer/Popup/AnimationPlayer
+
 onready var danger = $CanvasLayer/Danger
 onready var stress = $CanvasLayer/Stress
 onready var hunger = $CanvasLayer/Hunger
@@ -24,6 +28,10 @@ func _ready():
 # Takes items in singleton and displays them in the inventory
 func refresh_inventory():
 	var i = 0
+	# Reset slots
+	for slot in inventory.get_children():
+		slot.text = ""
+	# Fill slots with inventory content
 	for item in GameParameters.items:
 		inventory.get_child(i).text = item + " x" + str(GameParameters.items[item])
 		i += 1
@@ -34,18 +42,19 @@ func update_bars():
 	stress.value = GameParameters.stress
 	hunger.value = GameParameters.hunger
 
+func show_popup(text):
+	populText.text = text
+	popupAnim.play("Popup")
+	yield(get_tree().create_timer(5.0), "timeout")
+	popupAnim.play_backwards("Popup")
 
 func _process(delta):
 	# Updates clock every frame
 	clock.text = str(Time.timeInMinutes) + " : " + str(Time.timeInSeconds)
-	
-	# Update bars every frame
-	
-
 
 func _on_DangerTimer_timeout():
-	danger.value += GameParameters.dangerIncrease
-	GameParameters.danger = danger.value
+	GameParameters.danger += GameParameters.dangerIncrease
+	danger.value = GameParameters.danger
 	
 	if danger.value >= danger.max_value:
 		get_tree().change_scene("res://World/GameOver.tscn")
@@ -60,8 +69,8 @@ func _on_StressTimer_timeout():
 
 
 func _on_HungerTimer_timeout():
-	hunger.value += GameParameters.hungerIncrease
-	GameParameters.hunger = hunger.value
+	GameParameters.hunger += GameParameters.hungerIncrease
+	hunger.value = GameParameters.hunger
 	
 	if hunger.value >= hunger.max_value:
 		get_tree().change_scene("res://World/GameOver.tscn")

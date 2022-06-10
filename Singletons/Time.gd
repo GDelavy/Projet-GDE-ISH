@@ -1,14 +1,7 @@
 extends Timer
 
-# Global Variables
-var danger = 0
-var stress = 0
-var hunger = 0
-
 # Time to countdown in seconds
 var countdownTime = 240
-
-var inventory = {"Food" : 4, "Water" : 2} setget inventory_changed
 
 # Time
 var time = 0
@@ -33,7 +26,7 @@ func _process(delta):
 	if !gameOver:
 		clock_timer()
 		# Game Over
-		if timeInMinutes == 4:
+		if timeInMinutes >= 4:
 			gameOver = true
 			currentTime = "Dawn"
 			get_tree().change_scene("res://World/GameOver.tscn")
@@ -57,12 +50,13 @@ func _process(delta):
 		
 	#print (str(timeInMinutes) + ":" + str(timeInSeconds))
 
+# Used when Game Over screen is loading a new run
+func reset_values():
+	gameOver = false
+	start()
 
-
+# Updates time whenever called
 func clock_timer():
 	time = int(get_time_left())
 	timeInSeconds = time % 60
 	timeInMinutes = (time/60) % 60
-
-func inventory_changed(inventory):
-	pass

@@ -21,19 +21,26 @@ func _ready():
 	refresh_inventory()
 	update_bars()
 
+# Takes items in singleton and displays them in the inventory
 func refresh_inventory():
 	var i = 0
-	for item in items:
-		inventory.get_child(i).text = item + " x" + str(items[item])
+	for item in GameParameters.items:
+		inventory.get_child(i).text = item + " x" + str(GameParameters.items[item])
 		i += 1
 
+# Updates bars for when player moves to another screen
 func update_bars():
 	danger.value = GameParameters.danger
 	stress.value = GameParameters.stress
 	hunger.value = GameParameters.hunger
 
+
 func _process(delta):
+	# Updates clock every frame
 	clock.text = str(Time.timeInMinutes) + " : " + str(Time.timeInSeconds)
+	
+	# Update bars every frame
+	
 
 
 func _on_DangerTimer_timeout():
@@ -45,8 +52,8 @@ func _on_DangerTimer_timeout():
 
 
 func _on_StressTimer_timeout():
-	stress.value += GameParameters.stressIncrease
-	GameParameters.stress = stress.value
+	GameParameters.stress += GameParameters.stressIncrease
+	stress.value = GameParameters.stress
 	
 	if stress.value >= stress.max_value:
 		get_tree().change_scene("res://World/GameOver.tscn")

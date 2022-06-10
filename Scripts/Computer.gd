@@ -6,12 +6,25 @@ onready var thanksScreen = $ThanksScreen
 onready var wikiScreen = $WikiScreen
 onready var newsScreen = $NewsScreen
 
+# Labels telling the player if their research made them feel better or worse
+onready var newsScreenLabel = $NewsScreen/Label2
+onready var wikiScreenLabel = $WikiScreen/Label2
+
 onready var amazonButton = $StartScreen/Amazon
 onready var wikipediaButton = $StartScreen/Wikipedia
 
 func _on_Wikipedia_pressed():
 	wikiScreen.visible = true
 	startScreen.visible = false
+	
+	# Return value between 0 and 100
+	var random = randi()%101
+	if random <= 45:
+		wikiScreenLabel.text = "You find useful information and feel better informed! You relax a little bit."
+		GameParameters.stress -= 15
+	else:
+		wikiScreenLabel.text = "The information you found worries you. Your stress goes up."
+		GameParameters.stress += 20
 
 func _on_Amazon_pressed():
 	orderScreen.visible = true
@@ -21,7 +34,14 @@ func _on_News_pressed():
 	newsScreen.visible = true
 	startScreen.visible = false
 	
-
+	# Return value between 0 and 100
+	var random = randi()%101
+	if random <= 25:
+		newsScreenLabel.text = "You find some uplifting news! You feel a bit better."
+		GameParameters.stress -= 15
+	else:
+		newsScreenLabel.text = "You find the news depressing, your stress levels go up."
+		GameParameters.stress += 25
 
 func _on_Food_pressed():
 	GameParameters.currentOrder = "Food"

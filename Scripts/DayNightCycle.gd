@@ -23,18 +23,16 @@ func _ready():
 	else:
 		color = NIGHT_COLOR
 
+# Transition from one color to another
 func sunset_transition(current_color, new_color):
 	colorTransition.interpolate_property(self,"color",current_color,new_color,sunsetDuration,Tween.TRANS_SINE,Tween.EASE_OUT)
 	colorTransition.start()
 	
 func on_Afternoon_Start():
 	sunset_transition(DAWN_COLOR, DAY_COLOR)
-	print("Afternoon!")
 
 func on_Evening_Start():
 	sunset_transition(DAY_COLOR, EVE_COLOR)
-	print("Evening!")
 
 func on_Night_Start():
 	sunset_transition(EVE_COLOR, NIGHT_COLOR)
-	print("Night!")

@@ -4,11 +4,8 @@ func _ready():
 	Time.stop()
 
 func _on_Button_pressed():
-	Time.gameOver = false
-	Time.start()
-	
-	GameParameters.danger = 0
-	GameParameters.stress = 0
-	GameParameters.hunger = 0
+	# Reset all relevant values
+	Time.reset_values()
+	GameParameters.reset_values()
 
 	get_tree().change_scene("res://World/Apartment.tscn")

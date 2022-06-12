@@ -6,7 +6,7 @@ onready var animation = $AnimatedSprite
 var canTrigger = false
 var isFull = false
 
-func _process(delta):
+func _process(_delta):
 	if canTrigger and !isFull:
 		if Input.is_action_just_pressed("interact"):
 			get_parent().get_parent().get_node("UI").show_popup("Bathtub filled")

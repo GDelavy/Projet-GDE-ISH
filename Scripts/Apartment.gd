@@ -24,6 +24,7 @@ func set_tv_visible():
 	if television.visible:
 		television.visible = false
 		player.canMove = true
+		television.reset_display()
 	else:
 		television.visible = true
 		player.canMove = false

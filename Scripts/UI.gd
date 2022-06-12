@@ -21,7 +21,6 @@ var items = {"Food": 5, "Water": 3, "Batteries": 1}
 onready var clock = $CanvasLayer/ClockPanel/Clock
 
 func _ready():
-	var i = 0
 	refresh_inventory()
 	update_bars()
 
@@ -48,7 +47,7 @@ func show_popup(text):
 	yield(get_tree().create_timer(5.0), "timeout")
 	popupAnim.play_backwards("Popup")
 
-func _process(delta):
+func _process(_delta):
 	# Updates clock every frame
 	clock.text = str(Time.timeInMinutes) + " : " + str(Time.timeInSeconds)
 

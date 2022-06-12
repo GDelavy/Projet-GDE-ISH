@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Assets/Computer.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Computer.gd" type="Script" id=2]
@@ -740,6 +740,10 @@ VSlider/styles/grabber_area = SubResource( 21 )
 VSlider/styles/grabber_area_highlight = SubResource( 22 )
 VSlider/styles/slider = SubResource( 46 )
 
+[sub_resource type="DynamicFont" id=73]
+size = 51
+font_data = ExtResource( 5 )
+
 [node name="Computer" type="TextureRect"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -943,6 +947,44 @@ text = "You find the news depressing, your stress levels go up."
 align = 1
 valign = 1
 autowrap = true
+
+[node name="WaitScreen" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="WaitScreen"]
+margin_left = 32.0
+margin_top = 23.0
+margin_right = 345.0
+margin_bottom = 108.0
+text = "Your order is on its way! It will arrive soon"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="WaitScreen"]
+margin_left = 32.0
+margin_top = 103.0
+margin_right = 345.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 73 )
+text = "30"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="WaitScreen"]
+wait_time = 30.0
 
 [node name="NoInternetScreen" type="Control" parent="."]
 visible = false

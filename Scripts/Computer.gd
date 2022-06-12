@@ -5,13 +5,21 @@ onready var startScreen = $StartScreen
 onready var thanksScreen = $ThanksScreen
 onready var wikiScreen = $WikiScreen
 onready var newsScreen = $NewsScreen
+onready var waitScreen = $WaitScreen
 
 # Labels telling the player if their research made them feel better or worse
 onready var newsScreenLabel = $NewsScreen/Label2
 onready var wikiScreenLabel = $WikiScreen/Label2
+onready var waitScreenLabel = $WaitScreen/TimeLabel
+
+onready var waitScreenTimer = $WaitScreen/Timer
 
 onready var amazonButton = $StartScreen/Amazon
 onready var wikipediaButton = $StartScreen/Wikipedia
+
+func _process(_delta):
+	# Display time before order is there
+	waitScreenLabel.text = str(ceil(waitScreenTimer.time_left))
 
 func _on_Wikipedia_pressed():
 	wikiScreen.visible = true
@@ -27,8 +35,12 @@ func _on_Wikipedia_pressed():
 		GameParameters.stress += 15
 
 func _on_Amazon_pressed():
-	orderScreen.visible = true
-	startScreen.visible = false
+	if GameParameters.currentOrder == null:
+		orderScreen.visible = true
+		startScreen.visible = false
+	else:
+		waitScreen.visible = true
+		startScreen.visible = false
 
 func _on_News_pressed():
 	newsScreen.visible = true
@@ -68,11 +80,13 @@ func _on_MedKit_pressed():
 	Display_Thanks()
 
 func Display_Thanks():
+	waitScreenTimer.start()
 	newsScreen.visible = false
 	startScreen.visible = false
 	orderScreen.visible = false
 	wikiScreen.visible = false
 	thanksScreen.visible = true
+	waitScreen.visible = false
 
 func display_wiki():
 	newsScreen.visible = false
@@ -80,6 +94,7 @@ func display_wiki():
 	orderScreen.visible = false
 	wikiScreen.visible = true
 	thanksScreen.visible = false
+	waitScreen.visible = false
 
 func reset_display():
 	newsScreen.visible = false
@@ -87,3 +102,4 @@ func reset_display():
 	orderScreen.visible = false
 	thanksScreen.visible = false
 	wikiScreen.visible = false
+	waitScreen.visible = false

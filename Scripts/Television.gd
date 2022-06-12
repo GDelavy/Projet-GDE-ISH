@@ -4,7 +4,7 @@ onready var sprite = $Sprite
 
 var canTrigger = false
 
-func _process(delta):
+func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
 				get_parent().get_parent().set_tv_visible()

@@ -1,17 +1,18 @@
 extends Area2D
+class_name Item
 
 onready var sprite = $Sprite
 
 var canTrigger = false
-var item_name = "Book"
+export var item_name = "Book"
 var quantity = 1
 
 func _ready():
 	var path = "res://Assets/Icons/" + item_name + ".png"
-	var texture =  load(path)
+	var texture = load(path)
 	sprite.set_texture(texture)
 
-func _process(delta):
+func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
 				owner.item_picked_up(item_name, quantity)

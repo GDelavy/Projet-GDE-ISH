@@ -3,17 +3,14 @@ extends StaticBody2D
 onready var sprite = $Sprite
 
 var canTrigger = false
-var library_dialogue
 
 func _ready():
 	Dialogic.set_variable("AdviceID", GameParameters.adviceId)
-	library_dialogue = Dialogic.start("LibraryAdvice")
 
-func _process(delta):
+func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
-				Dialogic.set_variable("AdviceID", GameParameters.adviceId)
-				add_child(library_dialogue)
+				pass
 
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("player"):

@@ -22,7 +22,7 @@ func _ready():
 	# Initialize countdown
 	set_wait_time(countdownTime)
 
-func _process(delta):
+func _process(_delta):
 	if !gameOver:
 		clock_timer()
 		# Game Over
@@ -53,6 +53,7 @@ func _process(delta):
 # Used when Game Over screen is loading a new run
 func reset_values():
 	gameOver = false
+	set_wait_time(countdownTime)
 	start()
 
 # Updates time whenever called

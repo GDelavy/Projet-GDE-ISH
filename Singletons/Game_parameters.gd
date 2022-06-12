@@ -12,7 +12,7 @@ var stressIncrease = 1.25
 var hungerIncrease = 1.5
 
 # Whichever advice the player will get
-var adviceId = [0,1,2,3,4]
+var adviceId = 3
 
 # Used when player orders items on the computer
 var currentOrder = null

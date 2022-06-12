@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://Effects/DayNightCycle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Spritesheets/5_Classroom_and_library_32x32.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Prefabs/Oven.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Passport.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Prefabs/ReadingLibrary.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Wardrobe.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2187,9 +2188,10 @@ position = Vector2( 576, 371 )
 [node name="ReadingLibrary" parent="Interactive" instance=ExtResource( 19 )]
 position = Vector2( 160, 395 )
 
-[node name="Items" type="Node2D" parent="."]
+[node name="Wardrobe" parent="Interactive" instance=ExtResource( 20 )]
+position = Vector2( 352, 403 )
 
-[node name="Passport" parent="Items" instance=ExtResource( 18 )]
+[node name="Passport" parent="." instance=ExtResource( 18 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 458, 306 )

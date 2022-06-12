@@ -15,7 +15,7 @@ func _ready():
 func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
-				owner.item_picked_up(item_name, quantity)
+				get_parent().item_picked_up(item_name, quantity)
 				queue_free()
 
 func _on_Item_body_entered(body):

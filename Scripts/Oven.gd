@@ -15,8 +15,8 @@ func _process(_delta):
 						GameParameters.items.erase("Raw Food")
 					else:
 						GameParameters.items["Raw Food"] -= 1
-					get_parent().get_parent().get_node("UI").show_popup("Prepared meal, hunger decreased")
-					get_parent().get_parent().get_node("UI").refresh_inventory()
+					owner.ui.show_popup("Prepared meal, hunger decreased")
+					owner.ui.refresh_inventory()
 					GameParameters.hunger -= 35
 
 func _on_Area2D_body_entered(body):

@@ -961,7 +961,7 @@ margin_left = 32.0
 margin_top = 23.0
 margin_right = 345.0
 margin_bottom = 108.0
-text = "Your order is on its way! It will arrive soon"
+text = "Your order is on its way! It will soon be delivered to your apartment."
 align = 1
 valign = 1
 autowrap = true
@@ -985,6 +985,7 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="WaitScreen"]
 wait_time = 30.0
+one_shot = true
 
 [node name="NoInternetScreen" type="Control" parent="."]
 visible = false
@@ -1020,3 +1021,4 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="StartScreen/Wikipedia" to="." method="_on_Wikipedia_pressed"]
 [connection signal="pressed" from="StartScreen/News" to="." method="_on_News_pressed"]
 [connection signal="pressed" from="StartScreen/Amazon" to="." method="_on_Amazon_pressed"]
+[connection signal="timeout" from="WaitScreen/Timer" to="." method="_on_Timer_timeout"]

@@ -15,11 +15,15 @@ var hungerIncrease = 1.5
 var adviceId = 3
 
 # Used when player orders items on the computer
+var orderReady = false
 var currentOrder = null
 var currentQuantity = 1
 
 # Last place visited. Used to know where to spawn player in hallway scene
 var lastVisited = "Apartment"
+
+var isGason = true
+var isElectricityOn = true
 
 # Randomizes seed so each run will give different random numbers
 func _ready():

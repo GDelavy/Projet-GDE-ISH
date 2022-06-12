@@ -85,8 +85,8 @@ func Display_Thanks():
 	startScreen.visible = false
 	orderScreen.visible = false
 	wikiScreen.visible = false
-	thanksScreen.visible = true
-	waitScreen.visible = false
+	thanksScreen.visible = false
+	waitScreen.visible = true
 
 func display_wiki():
 	newsScreen.visible = false
@@ -103,3 +103,7 @@ func reset_display():
 	thanksScreen.visible = false
 	wikiScreen.visible = false
 	waitScreen.visible = false
+
+
+func _on_Timer_timeout():
+	GameParameters.orderReady = true

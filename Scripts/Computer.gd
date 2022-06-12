@@ -81,6 +81,7 @@ func _on_MedKit_pressed():
 
 func Display_Thanks():
 	waitScreenTimer.start()
+	GameParameters.orderTime = Time.time_left - 30
 	newsScreen.visible = false
 	startScreen.visible = false
 	orderScreen.visible = false
@@ -103,7 +104,3 @@ func reset_display():
 	thanksScreen.visible = false
 	wikiScreen.visible = false
 	waitScreen.visible = false
-
-
-func _on_Timer_timeout():
-	GameParameters.orderReady = true

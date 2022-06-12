@@ -8,9 +8,13 @@ export var item_name = "Book"
 var quantity = 1
 
 func _ready():
+	# Check if the sprite exists
 	var path = "res://Assets/Icons/" + item_name + ".png"
-	var texture = load(path)
-	sprite.set_texture(texture)
+	var file2Check = File.new()
+	# If it does, load it
+	if file2Check.file_exists(path):
+		var texture = load(path)
+		sprite.set_texture(texture)
 
 func _process(_delta):
 		if canTrigger:

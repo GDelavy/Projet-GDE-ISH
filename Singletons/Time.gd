@@ -55,6 +55,7 @@ func reset_values():
 	gameOver = false
 	set_wait_time(countdownTime)
 	start()
+	currentTime = "Dawn"
 
 # Updates time whenever called
 func clock_timer():

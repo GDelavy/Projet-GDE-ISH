@@ -15,22 +15,22 @@ var hungerIncrease = 1.5
 var adviceId = 3
 
 # Used when player orders items on the computer
-var orderReady = false
+var orderTime = false
 var currentOrder = null
 var currentQuantity = 1
 
 # Last place visited. Used to know where to spawn player in hallway scene
 var lastVisited = "Apartment"
 
+# Apartment parameters
 var isGason = true
 var isElectricityOn = true
+
 
 # Randomizes seed so each run will give different random numbers
 func _ready():
 	randomize()
 	adviceId = randi()%5
-	Dialogic.set_variable("AdviceID", adviceId)
-
 # Used when launching a new run by Game Over screen
 func reset_values():
 	stress = 0
@@ -61,3 +61,5 @@ func modify_hunger(value):
 	hunger = value
 	if hunger < 0:
 		hunger = 0
+
+

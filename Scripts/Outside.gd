@@ -3,12 +3,12 @@ extends Node2D
 onready var ui = $UI
 
 func _ready():
-	if GameParameters.orderReady:
+	if Time.time_left <= GameParameters.orderTime:
 		if GameParameters.currentOrder != null:
 			var item = load("res://Prefabs/Item.tscn")
 			var instance = item.instance()
-			instance.position = Vector2(384,256)
-			#instance.item_name = GameParameters.currentOrder
+			instance.position = Vector2(168,224)
+			instance.item_name = GameParameters.currentOrder
 			instance.quantity = GameParameters.currentQuantity
 			instance.owner = self
 			add_child(instance)

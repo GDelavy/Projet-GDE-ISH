@@ -3,7 +3,6 @@
 [ext_resource path="res://World/Tilemap-export.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Buildings/BehindBuildingRed.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/World.gd" type="Script" id=4]
 [ext_resource path="res://World/Buildings/GreyBuildingBehind.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Buildings/House.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Buildings/BuildingOne.tscn" type="PackedScene" id=7]
@@ -15,6 +14,18 @@
 [ext_resource path="res://World/Decors/Bench.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/Decors/SmallSign.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World/Buildings/AppartmentComplex.tscn" type="PackedScene" id=15]
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends Node2D
+
+onready var canvasLayer = $CanvasLayer
+
+
+
+func _process(delta):
+	if Input.is_action_just_pressed(\"interact\"):
+		pass
+"
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
@@ -1837,7 +1848,7 @@ points = PoolVector2Array( 0, 0, 96, 0, 96, 32, 0, 32 )
 116/z_index = 0
 
 [node name="World" type="YSort"]
-script = ExtResource( 4 )
+script = SubResource( 13 )
 
 [node name="BuildingTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 12 )

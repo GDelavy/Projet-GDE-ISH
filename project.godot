@@ -38,11 +38,6 @@ _global_script_classes=[ {
 "class": "Item",
 "language": "GDScript",
 "path": "res://Scripts/Item.gd"
-}, {
-"base": "MarginContainer",
-"class": "ScreenManager",
-"language": "GDScript",
-"path": "res://Scripts/ScreenManager.gd"
 } ]
 _global_script_class_icons={
 "Dialogic": "",
@@ -50,8 +45,7 @@ _global_script_class_icons={
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
 "DialogicUtil": "",
-"Item": "",
-"ScreenManager": ""
+"Item": ""
 }
 
 [application]

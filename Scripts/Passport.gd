@@ -1,5 +1,9 @@
 extends Item
 
+# Make sure the player hasn't picked up item
+func _ready():
+	if GameParameters.items.has("Passport"):
+		queue_free()
 
 func _process(_delta):
 		if canTrigger:

@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Passport.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Icons/Passport.png" type="Texture" id=2]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -80,11 +81,8 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/isActive = true
 
-[sub_resource type="StreamTexture" id=2]
-load_path = "res://.import/Book_sign_blue.png-7a80a7a5a2a94d5740d887579740cd65.stex"
-
 [sub_resource type="RectangleShape2D" id=80]
-extents = Vector2( 29.5, 37 )
+extents = Vector2( 48, 37 )
 
 [node name="Passport" type="Area2D"]
 position = Vector2( 680, 243 )
@@ -94,11 +92,11 @@ item_name = "Passport"
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 79 )
 position = Vector2( -265, 678 )
-texture = SubResource( 2 )
+texture = ExtResource( 2 )
 offset = Vector2( 265, -678 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 1 )
+position = Vector2( 0, 1 )
 shape = SubResource( 80 )
 
 [connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]

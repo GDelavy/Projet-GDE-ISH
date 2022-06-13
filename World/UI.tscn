@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Effects/DayNightCycle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Computer.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/GUI/SimpleBox.tres" type="Theme" id=5]
 [ext_resource path="res://Assets/GUI/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/GUI/SimpleBoxDark.tres" type="Theme" id=7]
+[ext_resource path="res://Scripts/Dialog.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=33]
 size = 30
@@ -42,6 +43,7 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Animation" id=35]
 resource_name = "Popup"
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
 tracks/0/interp = 1
@@ -49,10 +51,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8, 552 ), Vector2( 8, 488 ) ]
+"values": [ Vector2( 8, 552 ), Vector2( 8, 488 ), Vector2( 8, 488 ), Vector2( 8, 552 ) ]
 }
 
 [sub_resource type="Animation" id=36]
@@ -68,6 +70,37 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 8, 552 ) ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "Bob"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 752, 120 ), Vector2( 752, 128 ), Vector2( 752, 120 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 752, 120 ) ]
 }
 
 [node name="UI" type="Control"]
@@ -358,6 +391,39 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Popup"]
 anims/Popup = SubResource( 35 )
 anims/RESET = SubResource( 36 )
+
+[node name="Dialog" type="Panel" parent="CanvasLayer"]
+visible = false
+margin_left = 16.0
+margin_top = 376.0
+margin_right = 792.0
+margin_bottom = 520.0
+theme = ExtResource( 7 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialogPath = "res://Assets/Dialogs/Dialog0.json"
+
+[node name="Text" type="RichTextLabel" parent="CanvasLayer/Dialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 136.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Indicator" type="Polygon2D" parent="CanvasLayer/Dialog"]
+position = Vector2( 752, 120 )
+color = Color( 0.207843, 0.0509804, 0.556863, 1 )
+polygon = PoolVector2Array( -8, -8, 8, -8, 0, 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Dialog/Indicator"]
+anims/Bob = SubResource( 37 )
+anims/RESET = SubResource( 38 )
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Dialog"]
 
 [connection signal="timeout" from="CanvasLayer/EventPanel/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Danger/DangerTimer" to="." method="_on_DangerTimer_timeout"]

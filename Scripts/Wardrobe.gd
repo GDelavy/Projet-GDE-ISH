@@ -10,7 +10,7 @@ func _process(_delta):
 		if Input.is_action_just_pressed("interact"):
 			GameParameters.items["Clothes"] = 5
 			owner.ui.refresh_inventory()
-			owner.ui.show_popup("Gathered essential clothing")
+			owner.ui.show_popup("Gathered essential clothing", true)
 			isFull = true
 
 func _on_Area2D_body_entered(body):

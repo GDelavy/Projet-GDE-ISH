@@ -12,7 +12,7 @@ func _ready():
 func _process(_delta):
 	if canTrigger and !GameParameters.isBathtubFull:
 		if Input.is_action_just_pressed("interact"):
-			get_parent().get_parent().get_node("UI").show_popup("Bathtub filled")
+			owner.ui.show_popup("Bathtub filled", true)
 			animation.play("fill")
 			AudioManager.play("res://Assets/Audio/water.ogg")
 			GameParameters.isBathtubFull = true

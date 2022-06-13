@@ -601,7 +601,7 @@ zoom = Vector2( 0.8, 0.8 )
 position = Vector2( 381, 113 )
 
 [node name="Sprite" parent="Player" index="0"]
-frame = 37
+frame = 40
 
 [node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 3 )

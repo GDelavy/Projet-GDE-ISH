@@ -12,8 +12,6 @@ var canAccessPC = false
 var canAccessPhone = false
 var canAccessLibrary = false
 
-var library_dialogue = Dialogic.start("LibraryAdvice")
-
 # Triggered when the player picks up an item
 func item_picked_up(item_name, quantity):
 	if GameParameters.items.has(item_name):

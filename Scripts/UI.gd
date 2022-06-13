@@ -4,7 +4,7 @@ onready var eventPanel = $CanvasLayer/EventPanel
 onready var eventTween = $CanvasLayer/EventPanel/Tween
 
 onready var popupPanel = $CanvasLayer/Popup
-onready var populText = $CanvasLayer/Popup/Label
+onready var popupText = $CanvasLayer/Popup/Label
 onready var popupAnim = $CanvasLayer/Popup/AnimationPlayer
 
 onready var danger = $CanvasLayer/Danger
@@ -18,6 +18,7 @@ onready var hungerTimer = $CanvasLayer/Hunger/HungerTimer
 onready var inventory = $CanvasLayer/Panel/Inventory
 var items = {"Food": 5, "Water": 3, "Batteries": 1}
 
+onready var dialog = $CanvasLayer/Dialog
 onready var clock = $CanvasLayer/ClockPanel/Clock
 
 func _ready():
@@ -41,11 +42,19 @@ func update_bars():
 	stress.value = GameParameters.stress
 	hunger.value = GameParameters.hunger
 
-func show_popup(text):
-	populText.text = text
+# isObjectives determines whether the event was required to win the game
+func show_popup(text, isObjective = false):
+	if isObjective:
+		GameParameters.completedObjectives += 1
+		popupText.text = text + " (" + str(GameParameters.completedObjectives) + "/" + str(GameParameters.totalObjectives) + ")"
+	else:
+		popupText.text = text
+	if popupAnim.is_playing():
+		popupAnim.stop()
 	popupAnim.play("Popup")
-	yield(get_tree().create_timer(5.0), "timeout")
-	popupAnim.play_backwards("Popup")
+
+func display_dialog():
+	pass
 
 func _process(_delta):
 	# Updates clock every frame

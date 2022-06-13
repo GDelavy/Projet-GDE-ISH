@@ -3,7 +3,6 @@ extends StaticBody2D
 onready var sprite = $Sprite
 
 var canTrigger = false
-var library_dialogue = Dialogic.start("LibraryAdvice")
 
 func _process(_delta):
 		if canTrigger:

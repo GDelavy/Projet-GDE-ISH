@@ -65,22 +65,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialogue" type="Label" parent="Control"]
+[node name="GUI" type="Label" parent="Control"]
 margin_left = 136.0
 margin_top = 32.0
 margin_right = 520.0
 margin_bottom = 77.0
-text = "Dialogue System :
-Dialogic Add-on, by Emilio Coppola."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GUI" type="Label" parent="Control"]
-margin_left = 136.0
-margin_top = 96.0
-margin_right = 520.0
-margin_bottom = 141.0
 text = "GUI Theme :
 SimpleBox, by Azagaya"
 __meta__ = {
@@ -89,11 +78,12 @@ __meta__ = {
 
 [node name="Visuals" type="Label" parent="Control"]
 margin_left = 136.0
-margin_top = 160.0
+margin_top = 104.0
 margin_right = 520.0
-margin_bottom = 205.0
+margin_bottom = 173.0
 text = "Visual Assets :
-Modern Interiors by LimeZu"
+Modern Interiors by LimeZu
+CleanCity by GuttyKreum"
 __meta__ = {
 "_edit_use_anchors_": false
 }

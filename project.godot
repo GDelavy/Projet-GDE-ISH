@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Projet ISH"
+config/name="Be Prepared"
 run/main_scene="res://World/Menus/MainMenu.tscn"
 
 [autoload]
@@ -39,7 +39,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 

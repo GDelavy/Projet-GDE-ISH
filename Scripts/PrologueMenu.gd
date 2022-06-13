@@ -2,7 +2,7 @@ extends Control
 
 var world_scene = "res://World/Apartment.tscn"
 
-var wait_time = 5
+var wait_time = 2
 
 onready var labels = [$Intro, $Time, $Levels]
 var currentLabel = 0

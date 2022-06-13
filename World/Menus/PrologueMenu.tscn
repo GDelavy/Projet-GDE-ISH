@@ -24,7 +24,7 @@ margin_top = 16.0
 margin_right = 944.0
 margin_bottom = 177.0
 custom_fonts/font = SubResource( 1 )
-text = "Your are an average person, quietly going through life, when one day, catastrophe strikes. Be it because of a pandemic, war, or even radioactive fallout, you must make sure you are safe and healthy."
+text = "Your are an average person, quietly going through life, when one day, catastrophe strikes. You must make sure you are safe and healthy, and ready for what is to come."
 valign = 1
 autowrap = true
 __meta__ = {
@@ -34,11 +34,11 @@ __meta__ = {
 [node name="Time" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 16.0
-margin_top = 224.0
+margin_top = 176.0
 margin_right = 944.0
-margin_bottom = 303.0
+margin_bottom = 337.0
 custom_fonts/font = SubResource( 1 )
-text = "You have a limited amount of time to figure out how to best prepare yourself and get through the day."
+text = "You have a limited amount of time to figure out how to best prepare yourself and get through the day. Go through your house and prepare it, and yourself, for the difficult times ahead!"
 valign = 1
 autowrap = true
 __meta__ = {
@@ -70,10 +70,41 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 autostart = true
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 488.0
+margin_right = 64.0
+margin_bottom = 509.0
+text = "Use"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 488.0
+margin_right = 192.0
+margin_bottom = 509.0
+text = "to interact with things!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="E" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 464.0
+margin_right = 136.0
+margin_bottom = 528.0
+disabled = true
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

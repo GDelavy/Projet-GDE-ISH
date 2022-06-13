@@ -50,6 +50,7 @@ margin_left = 72.0
 margin_top = 72.0
 margin_right = 136.0
 margin_bottom = 136.0
+disabled = true
 text = "W"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,6 +60,7 @@ __meta__ = {
 margin_top = 144.0
 margin_right = 64.0
 margin_bottom = 208.0
+disabled = true
 text = "A"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -69,6 +71,7 @@ margin_left = 72.0
 margin_top = 144.0
 margin_right = 136.0
 margin_bottom = 208.0
+disabled = true
 text = "S"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,6 +82,7 @@ margin_left = 144.0
 margin_top = 144.0
 margin_right = 208.0
 margin_bottom = 208.0
+disabled = true
 text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,6 +93,7 @@ margin_left = 304.0
 margin_top = 72.0
 margin_right = 368.0
 margin_bottom = 136.0
+disabled = true
 text = "↑"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,6 +104,7 @@ margin_left = 232.0
 margin_top = 144.0
 margin_right = 296.0
 margin_bottom = 208.0
+disabled = true
 text = "←"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -109,6 +115,7 @@ margin_left = 304.0
 margin_top = 144.0
 margin_right = 368.0
 margin_bottom = 208.0
+disabled = true
 text = "↓"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -119,6 +126,7 @@ margin_left = 376.0
 margin_top = 144.0
 margin_right = 440.0
 margin_bottom = 208.0
+disabled = true
 text = "→"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -142,6 +150,7 @@ margin_left = 32.0
 margin_top = 104.0
 margin_right = 96.0
 margin_bottom = 168.0
+disabled = true
 text = "E"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -14,8 +14,10 @@ func _process(_delta):
 				owner.ui.dialog.start_dialog("res://Assets/Dialogs/Library.json")
 				GameParameters.stress -= 15
 				
-				# Skip time
+				# Skip time. Make sure events aren't being missed
+				var original_time = Time.time
 				Time.start(Time.time_left - 30)
+				Time.check_time_skip_signals(original_time)
 				
 
 func _on_Area2D_body_exited(body):

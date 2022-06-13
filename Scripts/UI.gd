@@ -92,5 +92,5 @@ func _on_Timer_timeout():
 func on_Water_off():
 	show_popup("Water has been shut off")
 
-func on_Eelectricity_off():
+func on_Electricity_off():
 	show_popup("Electricity has been shut off")

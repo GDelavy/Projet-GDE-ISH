@@ -81,21 +81,23 @@ func clock_timer():
 
 # Makes sure that timeskips don't skip events (color change, current down, etc)
 func check_time_skip_signals(original_time):
+	print(original_time)
+	print(time_left)
 	# If skipped time change
-	if original_time > 180 and time < 180:
+	if original_time > 180 and time_left < 180:
 		emit_signal("isAfternoon")
 		currentTime = "Afternoon"
-	elif original_time > 120 and time < 120:
+	elif original_time > 120 and time_left < 120:
 		emit_signal("isEvening")
 		currentTime = "Evening"
-	elif original_time > 60 and time < 60:
+	elif original_time > 60 and time_left < 60:
 		emit_signal("isNight")
 		currentTime = "Night"
 
 	# If skipped water shut off
-	if original_time > 210 and time < 210:
+	if original_time > 210 and time_left < 210:
 		emit_signal("waterShutOff")
 		GameParameters.isWaterOn = false
-	elif original_time > 150 and time < 150:
+	elif original_time > 150 and time_left < 150:
 		emit_signal("electricityShutOff")
 		GameParameters.isElectricityOn = false

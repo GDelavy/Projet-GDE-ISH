@@ -11,7 +11,12 @@ func _on_TVButton_pressed():
 	TVScreen.visible = true
 	
 	GameParameters.stress -= 15
+	
+	
+	# Skip time. Make sure events aren't being missed
+	var original_time = Time.time
 	Time.start(Time.time_left - 30)
+	Time.check_time_skip_signals(original_time)
 
 
 func _on_GamesButton_pressed():
@@ -20,7 +25,12 @@ func _on_GamesButton_pressed():
 	gamesScreen.visible = true
 	
 	GameParameters.stress -= 30
+	
+	
+	# Skip time. Make sure events aren't being missed
+	var original_time = Time.time
 	Time.start(Time.time_left - 60)
+	Time.check_time_skip_signals(original_time)
 
 func reset_display():
 	startScreen.visible = true

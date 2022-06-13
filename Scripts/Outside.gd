@@ -10,7 +10,7 @@ func _ready():
 			instance.position = Vector2(168,224)
 			instance.item_name = GameParameters.currentOrder
 			instance.quantity = GameParameters.currentQuantity
-			instance.owner = self
+			instance.isOrdered = true
 			add_child(instance)
 
 

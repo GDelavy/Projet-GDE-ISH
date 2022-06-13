@@ -56,6 +56,7 @@ func show_popup(text, isObjective = false):
 	popupAnim.play("Popup")
 
 func _process(_delta):
+	print(GameParameters.currentOrder)
 	# Updates clock every frame
 	clock.text = str(Time.timeInMinutes) + " : " + str(Time.timeInSeconds)
 

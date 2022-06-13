@@ -600,9 +600,6 @@ zoom = Vector2( 0.8, 0.8 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 381, 113 )
 
-[node name="Sprite" parent="Player" index="0"]
-frame = 37
-
 [node name="AnimationTree" parent="Player" index="3"]
 parameters/playback = SubResource( 3 )
 

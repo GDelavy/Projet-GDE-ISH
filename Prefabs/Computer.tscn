@@ -778,6 +778,7 @@ __meta__ = {
 }
 
 [node name="OrderScreen" type="Control" parent="."]
+visible = false
 margin_right = 369.0
 margin_bottom = 207.0
 __meta__ = {
@@ -856,7 +857,6 @@ __meta__ = {
 }
 
 [node name="StartScreen" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 

@@ -4,6 +4,7 @@ class_name Item
 onready var sprite = $Sprite
 
 var canTrigger = false
+var isOrdered = false
 export var item_name = "Book"
 export var quantity = 1
 
@@ -20,18 +21,23 @@ func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
 				get_parent().item_picked_up(item_name, quantity)
+				if isOrdered:
+					GameParameters.currentOrder = null
 				if item_name == "Water Bottles":
 					if !GameParameters.isBathtubFull:
 						GameParameters.isWaterAvailable = true
 						get_parent().ui.show_popup("Acquired reserve of water", true)
+						GameParameters.danger -= 10
 				elif item_name == "Rations":
 					if !GameParameters.areRationsAvailable:
 						GameParameters.areRationsAvailable = true
 						get_parent().ui.show_popup("Acquired rations", true)
+						GameParameters.danger -= 15
 				elif item_name == "Medkit":
 					if !GameParameters.hasMedkit:
 						GameParameters.hasMedkit = true
 						get_parent().ui.show_popup("Medkit Acquired", true)
+						GameParameters.danger -= 20
 						
 					
 				queue_free()

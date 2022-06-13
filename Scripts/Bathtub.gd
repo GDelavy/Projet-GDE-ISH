@@ -19,6 +19,7 @@ func _process(_delta):
 				GameParameters.isWaterAvailable = true
 				if !GameParameters.items.has("Water Bottles"):
 					owner.ui.show_popup("Acquired reserve of water", true)
+					GameParameters.danger -= 10
 			else:
 				owner.ui.show_popup("Water has been shut off")
 

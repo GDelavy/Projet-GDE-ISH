@@ -28,11 +28,6 @@ func _ready():
 func _process(_delta):
 	if !gameOver:
 		clock_timer()
-		# Game Over
-		if timeInMinutes >= 4:
-			gameOver = true
-			currentTime = "Dawn"
-			get_tree().change_scene("res://World/GameOver.tscn")
 			
 		# Time is Afternoon
 		if timeInMinutes == 3 and timeInSeconds == 0:
@@ -101,3 +96,9 @@ func check_time_skip_signals(original_time):
 	elif original_time > 150 and time_left < 150:
 		emit_signal("electricityShutOff")
 		GameParameters.isElectricityOn = false
+
+
+func _on_Timer_timeout():
+	gameOver = true
+	currentTime = "Dawn"
+	get_tree().change_scene("res://World/GameOver.tscn")

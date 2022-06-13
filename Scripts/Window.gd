@@ -20,6 +20,7 @@ func _process(_delta):
 					AudioManager.play("res://Assets/Audio/Duct_tape.wav")
 					GameParameters.taped_windows[window_id] = true
 					if GameParameters.check_if_all_windows_taped():
+						GameParameters.danger -= 20
 						owner.ui.show_popup("Secured all windows", true)
 						GameParameters.items.erase("Duct Tape")
 						owner.ui.refresh_inventory()

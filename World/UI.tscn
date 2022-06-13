@@ -210,6 +210,7 @@ __meta__ = {
 }
 
 [node name="DangerTimer" type="Timer" parent="CanvasLayer/Danger"]
+wait_time = 0.5
 autostart = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Danger"]
@@ -237,6 +238,7 @@ __meta__ = {
 }
 
 [node name="StressTimer" type="Timer" parent="CanvasLayer/Stress"]
+wait_time = 0.5
 autostart = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Stress"]
@@ -264,6 +266,7 @@ __meta__ = {
 }
 
 [node name="HungerTimer" type="Timer" parent="CanvasLayer/Hunger"]
+wait_time = 0.5
 autostart = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Hunger"]

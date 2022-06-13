@@ -6,7 +6,7 @@ func _ready():
 	# If the player wins
 	if GameParameters.completedObjectives >= GameParameters.totalObjectives:
 		$GameOver.text = "Congratulations!"
-		$Comment.text = "You completed all the tasks"
+		$Comment.text = "You completed all the tasks and got through the day!"
 		$Tasks.text = ""
 		$Button.text = "Play Again"
 	else:

@@ -18,6 +18,7 @@ func _process(_delta):
 							GameParameters.items.erase("Car Battery")
 							GameParameters.items.erase("Power Kit")
 							owner.ui.show_popup("Power back on", true)
+							GameParameters.danger -= 20
 							GameParameters.isElectricityRestored = true
 							GameParameters.isElectricityOn = true
 							sprite.texture = load("res://Assets/plugged_battery.png")

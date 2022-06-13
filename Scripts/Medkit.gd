@@ -17,6 +17,7 @@ func _process(_delta):
 					GameParameters.items["Medkit"] = 1
 				owner.ui.refresh_inventory()
 				owner.ui.show_popup("Medkit acquired", true)
+				GameParameters.danger -= 20
 				GameParameters.hasMedkit = true
 				GameParameters.isBasementMedkitTaken = true
 				queue_free()

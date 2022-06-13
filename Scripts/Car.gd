@@ -10,7 +10,7 @@ func _process(_delta):
 			if canTrigger and !GameParameters.isCarBatteryOut:
 				GameParameters.items["Car Battery"] = 1
 				AudioManager.play("res://Assets/Audio/Tools.wav")
-				owner.ui.refresh_inventory()
+				owner.ui.show_popup("Acquired Car Battery")
 				# Remove toolkit
 				GameParameters.items.erase("Toolkit")
 				owner.ui.refresh_inventory()

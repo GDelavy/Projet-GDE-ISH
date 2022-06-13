@@ -1,7 +1,7 @@
 extends Node
 
 # Items possessed by player
-var items = {"Raw Food": 2}
+var items = {"Raw Food": 3}
 
 # Stress, Danger and Hunger bars
 
@@ -9,9 +9,9 @@ var stress = 0 setget modify_stress
 var danger = 0 setget modify_danger
 var hunger = 0 setget modify_hunger
 
-var dangerIncrease = 1
-var stressIncrease = 1.25
-var hungerIncrease = 1.5
+var dangerIncrease = 0.75
+var stressIncrease = 0.5
+var hungerIncrease = 1.25
 
 # Advice ID of the library
 var currentId
@@ -65,10 +65,40 @@ func reset_values():
 	hunger = 0
 	
 	dangerIncrease = 1
-	stressIncrease = 1.25
-	hungerIncrease = 1.5
+	stressIncrease = 0.75
+	hungerIncrease = 1.25
 	
-	items = {"Raw Food": 2}
+	# Apartment parameters
+	isElectricityOn = true
+	isWaterOn = true
+
+	taped_windows = [false,false,false]
+
+# Completion marks
+	completedObjectives = 0
+	totalObjectives = 7
+
+	hasDuctTape = false
+	hasToolkit = false
+	isCarBatteryOut = false
+	isBasementMedkitTaken = false
+	isBathtubFull = false
+
+	isElectricityRestored = false
+	isWaterAvailable = false
+	isPassportSafe = false
+	isClothingReady = false
+	areWindowsSafe = false
+	hasMedkit = false
+	areRationsAvailable = false
+	
+	orderTime = 0
+	currentOrder = null
+	currentQuantity = 1
+	
+	lastVisited = "Apartment"
+	
+	items = {"Raw Food": 3}
 	
 	choose_random_dialog()
 

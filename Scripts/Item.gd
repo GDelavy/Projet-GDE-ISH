@@ -5,7 +5,7 @@ onready var sprite = $Sprite
 
 var canTrigger = false
 export var item_name = "Book"
-var quantity = 1
+export var quantity = 1
 
 func _ready():
 	# Check if the sprite exists

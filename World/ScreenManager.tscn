@@ -1,6 +1,18 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scripts/ScreenManager.gd" type="Script" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+var apartmentInstance
+var hallwayInstance
+var outsideInstance
+
+func _ready():
+	# Initialize countdown
+	set_wait_time(countdownTime)
+	
+	apartmentInstance = load(\"res://World/Apartment.tscn\").instance()
+"
 
 [node name="ScreenManager" type="Node"]
-script = ExtResource( 1 )
+script = SubResource( 1 )

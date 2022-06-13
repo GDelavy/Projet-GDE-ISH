@@ -3,6 +3,8 @@ extends Node
 # Items possessed by player
 var items = {"Raw Food": 5, "Water": 3, "Batteries": 1}
 
+# Stress, Danger and Hunger bars
+
 var stress = 0 setget modify_stress
 var danger = 0 setget modify_danger
 var hunger = 0 setget modify_hunger
@@ -11,11 +13,11 @@ var dangerIncrease = 1
 var stressIncrease = 1.25
 var hungerIncrease = 1.5
 
-# Whichever advice the player will get
+# Advice ID of the library
 var adviceId = 3
 
 # Used when player orders items on the computer
-var orderTime = false
+var orderTime = 0
 var currentOrder = null
 var currentQuantity = 1
 
@@ -26,6 +28,16 @@ var lastVisited = "Apartment"
 var isGason = true
 var isElectricityOn = true
 
+
+# Completion marks
+var isBathtubFull = false
+var isPassportSafe = false
+var isClothingReady = false
+var areWindowsSafe = false
+var isMedkitAvailable = false
+var isCarBatteryOut = false
+var areRationsAvailable = false
+var areValuablesSafe = false
 
 # Randomizes seed so each run will give different random numbers
 func _ready():

@@ -16,7 +16,10 @@ var library_dialogue = Dialogic.start("LibraryAdvice")
 
 # Triggered when the player picks up an item
 func item_picked_up(item_name, quantity):
-	GameParameters.items[item_name] = quantity
+	if GameParameters.items.has(item_name):
+		GameParameters.items[item_name] += quantity
+	else:
+		GameParameters.items[item_name] = quantity
 	ui.refresh_inventory()
 
 # Called when TV is toggled by player

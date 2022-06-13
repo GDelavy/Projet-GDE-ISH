@@ -56,7 +56,7 @@ func _on_News_pressed():
 		GameParameters.stress += 25
 
 func _on_Food_pressed():
-	GameParameters.currentOrder = "Food"
+	GameParameters.currentOrder = "Raw Food"
 	Display_Thanks()
 
 func _on_Batteries_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://Effects/DayNightCycle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Spritesheets/5_Classroom_and_library_32x32.png" type="Texture" id=2]
@@ -22,780 +22,532 @@
 [ext_resource path="res://Prefabs/Wardrobe.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/window.png" type="Texture" id=21]
 [ext_resource path="res://Scripts/Window.gd" type="Script" id=22]
+[ext_resource path="res://Assets/Spritesheets/Room_Builder_Walls_32x32.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Spritesheets/Room_Builder_3d_walls_32x32.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Spritesheets/Room_Builder_Floors_32x32.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Spritesheets/Room_Builder_borders_32x32.png" type="Texture" id=26]
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
+[sub_resource type="ConvexPolygonShape2D" id=84]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="StreamTexture" id=32]
-load_path = "res://.import/Room_Builder_3d_walls_32x32.png-cc226c17d02b6af27188c14b3781dd60.stex"
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
+[sub_resource type="ConvexPolygonShape2D" id=85]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=86]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="StreamTexture" id=33]
-load_path = "res://.import/Room_Builder_borders_32x32.png-d43736ac09145d198f8ba655358031d9.stex"
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=87]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=88]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=89]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=90]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=91]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=25]
+[sub_resource type="ConvexPolygonShape2D" id=92]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=26]
+[sub_resource type="ConvexPolygonShape2D" id=93]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=27]
+[sub_resource type="ConvexPolygonShape2D" id=94]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="StreamTexture" id=34]
-load_path = "res://.import/Room_Builder_Walls_32x32.png-31ad1f1235724d8aa13cb5c4f312d09c.stex"
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
+[sub_resource type="ConvexPolygonShape2D" id=95]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=29]
+[sub_resource type="ConvexPolygonShape2D" id=96]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="StreamTexture" id=35]
-load_path = "res://.import/Room_Builder_Floors_32x32.png-88bd67386812b052df250dedad4b8991.stex"
+[sub_resource type="ConvexPolygonShape2D" id=97]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=98]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=99]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=100]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=1]
-17/name = "Room_Builder_3d_walls_32x32.png 17"
-17/texture = SubResource( 32 )
-17/tex_offset = Vector2( 0, 0 )
-17/modulate = Color( 1, 1, 1, 1 )
-17/region = Rect2( 352, 64, 32, 32 )
-17/tile_mode = 2
-17/autotile/icon_coordinate = Vector2( 0, 0 )
-17/autotile/tile_size = Vector2( 32, 32 )
-17/autotile/spacing = 0
-17/autotile/occluder_map = [  ]
-17/autotile/navpoly_map = [  ]
-17/autotile/priority_map = [  ]
-17/autotile/z_index_map = [  ]
-17/occluder_offset = Vector2( 0, 0 )
-17/navigation_offset = Vector2( 0, 0 )
-17/shape_offset = Vector2( 0, 0 )
-17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape = SubResource( 17 )
-17/shape_one_way = false
-17/shape_one_way_margin = 1.0
-17/shapes = [ {
+64/name = "Room_Builder_3d_walls_32x32.png 64"
+64/texture = ExtResource( 24 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 352, 64, 32, 32 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 0, 0 )
+64/navigation_offset = Vector2( 0, 0 )
+64/shape_offset = Vector2( 0, 0 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape = SubResource( 84 )
+64/shape_one_way = false
+64/shape_one_way_margin = 1.0
+64/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 84 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-17/z_index = 0
-18/name = "Room_Builder_3d_walls_32x32.png 18"
-18/texture = SubResource( 32 )
-18/tex_offset = Vector2( 0, 0 )
-18/modulate = Color( 1, 1, 1, 1 )
-18/region = Rect2( 384, 64, 32, 32 )
-18/tile_mode = 2
-18/autotile/icon_coordinate = Vector2( 0, 0 )
-18/autotile/tile_size = Vector2( 32, 32 )
-18/autotile/spacing = 0
-18/autotile/occluder_map = [  ]
-18/autotile/navpoly_map = [  ]
-18/autotile/priority_map = [  ]
-18/autotile/z_index_map = [  ]
-18/occluder_offset = Vector2( 0, 0 )
-18/navigation_offset = Vector2( 0, 0 )
-18/shape_offset = Vector2( 0, 0 )
-18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape = SubResource( 18 )
-18/shape_one_way = false
-18/shape_one_way_margin = 1.0
-18/shapes = [ {
+64/z_index = 0
+65/name = "Room_Builder_3d_walls_32x32.png 65"
+65/texture = ExtResource( 24 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 384, 64, 32, 32 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 0, 0 )
+65/navigation_offset = Vector2( 0, 0 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape = SubResource( 85 )
+65/shape_one_way = false
+65/shape_one_way_margin = 1.0
+65/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 85 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-18/z_index = 0
-23/name = "Room_Builder_3d_walls_32x32.png 23"
-23/texture = SubResource( 32 )
-23/tex_offset = Vector2( 0, 0 )
-23/modulate = Color( 1, 1, 1, 1 )
-23/region = Rect2( 352, 96, 32, 32 )
-23/tile_mode = 2
-23/autotile/icon_coordinate = Vector2( 0, 0 )
-23/autotile/tile_size = Vector2( 32, 32 )
-23/autotile/spacing = 0
-23/autotile/occluder_map = [  ]
-23/autotile/navpoly_map = [  ]
-23/autotile/priority_map = [  ]
-23/autotile/z_index_map = [  ]
-23/occluder_offset = Vector2( 0, 0 )
-23/navigation_offset = Vector2( 0, 0 )
-23/shape_offset = Vector2( 0, 0 )
-23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-23/shape_one_way = false
-23/shape_one_way_margin = 0.0
-23/shapes = [  ]
-23/z_index = 0
-24/name = "Room_Builder_3d_walls_32x32.png 24"
-24/texture = SubResource( 32 )
-24/tex_offset = Vector2( 0, 0 )
-24/modulate = Color( 1, 1, 1, 1 )
-24/region = Rect2( 384, 96, 32, 32 )
-24/tile_mode = 2
-24/autotile/icon_coordinate = Vector2( 0, 0 )
-24/autotile/tile_size = Vector2( 32, 32 )
-24/autotile/spacing = 0
-24/autotile/occluder_map = [  ]
-24/autotile/navpoly_map = [  ]
-24/autotile/priority_map = [  ]
-24/autotile/z_index_map = [  ]
-24/occluder_offset = Vector2( 0, 0 )
-24/navigation_offset = Vector2( 0, 0 )
-24/shape_offset = Vector2( 0, 0 )
-24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-24/shape_one_way = false
-24/shape_one_way_margin = 0.0
-24/shapes = [  ]
-24/z_index = 0
-29/name = "Room_Builder_3d_walls_32x32.png 29"
-29/texture = SubResource( 32 )
-29/tex_offset = Vector2( 0, 0 )
-29/modulate = Color( 1, 1, 1, 1 )
-29/region = Rect2( 384, 128, 32, 32 )
-29/tile_mode = 2
-29/autotile/icon_coordinate = Vector2( 0, 0 )
-29/autotile/tile_size = Vector2( 32, 32 )
-29/autotile/spacing = 0
-29/autotile/occluder_map = [  ]
-29/autotile/navpoly_map = [  ]
-29/autotile/priority_map = [  ]
-29/autotile/z_index_map = [  ]
-29/occluder_offset = Vector2( 0, 0 )
-29/navigation_offset = Vector2( 0, 0 )
-29/shape_offset = Vector2( 0, 0 )
-29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-29/shape_one_way = false
-29/shape_one_way_margin = 0.0
-29/shapes = [  ]
-29/z_index = 0
-39/name = "Room_Builder_borders_32x32.png 39"
-39/texture = SubResource( 33 )
-39/tex_offset = Vector2( 0, 0 )
-39/modulate = Color( 1, 1, 1, 1 )
-39/region = Rect2( 192, 32, 32, 32 )
-39/tile_mode = 2
-39/autotile/icon_coordinate = Vector2( 0, 0 )
-39/autotile/tile_size = Vector2( 32, 32 )
-39/autotile/spacing = 0
-39/autotile/occluder_map = [  ]
-39/autotile/navpoly_map = [  ]
-39/autotile/priority_map = [  ]
-39/autotile/z_index_map = [  ]
-39/occluder_offset = Vector2( 0, 0 )
-39/navigation_offset = Vector2( 0, 0 )
-39/shape_offset = Vector2( 0, 0 )
-39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-39/shape = SubResource( 19 )
-39/shape_one_way = false
-39/shape_one_way_margin = 1.0
-39/shapes = [ {
+65/z_index = 0
+66/name = "Room_Builder_3d_walls_32x32.png 66"
+66/texture = ExtResource( 24 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 352, 96, 32, 32 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape = SubResource( 86 )
+66/shape_one_way = false
+66/shape_one_way_margin = 1.0
+66/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 86 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-39/z_index = 0
-40/name = "Room_Builder_borders_32x32.png 40"
-40/texture = SubResource( 33 )
-40/tex_offset = Vector2( 0, 0 )
-40/modulate = Color( 1, 1, 1, 1 )
-40/region = Rect2( 224, 32, 32, 32 )
-40/tile_mode = 2
-40/autotile/icon_coordinate = Vector2( 0, 0 )
-40/autotile/tile_size = Vector2( 32, 32 )
-40/autotile/spacing = 0
-40/autotile/occluder_map = [  ]
-40/autotile/navpoly_map = [  ]
-40/autotile/priority_map = [  ]
-40/autotile/z_index_map = [  ]
-40/occluder_offset = Vector2( 0, 0 )
-40/navigation_offset = Vector2( 0, 0 )
-40/shape_offset = Vector2( 0, 0 )
-40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-40/shape = SubResource( 20 )
-40/shape_one_way = false
-40/shape_one_way_margin = 1.0
-40/shapes = [ {
+66/z_index = 0
+67/name = "Room_Builder_3d_walls_32x32.png 67"
+67/texture = ExtResource( 24 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 384, 96, 32, 32 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape = SubResource( 87 )
+67/shape_one_way = false
+67/shape_one_way_margin = 1.0
+67/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 87 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-40/z_index = 0
-41/name = "Room_Builder_borders_32x32.png 41"
-41/texture = SubResource( 33 )
-41/tex_offset = Vector2( 0, 0 )
-41/modulate = Color( 1, 1, 1, 1 )
-41/region = Rect2( 256, 32, 32, 32 )
-41/tile_mode = 2
-41/autotile/icon_coordinate = Vector2( 0, 0 )
-41/autotile/tile_size = Vector2( 32, 32 )
-41/autotile/spacing = 0
-41/autotile/occluder_map = [  ]
-41/autotile/navpoly_map = [  ]
-41/autotile/priority_map = [  ]
-41/autotile/z_index_map = [  ]
-41/occluder_offset = Vector2( 0, 0 )
-41/navigation_offset = Vector2( 0, 0 )
-41/shape_offset = Vector2( 0, 0 )
-41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-41/shape = SubResource( 21 )
-41/shape_one_way = false
-41/shape_one_way_margin = 1.0
-41/shapes = [ {
+67/z_index = 0
+68/name = "Room_Builder_3d_walls_32x32.png 68"
+68/texture = ExtResource( 24 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 448, 128, 32, 32 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape = SubResource( 88 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 88 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-41/z_index = 0
-42/name = "Room_Builder_borders_32x32.png 42"
-42/texture = SubResource( 33 )
-42/tex_offset = Vector2( 0, 0 )
-42/modulate = Color( 1, 1, 1, 1 )
-42/region = Rect2( 192, 64, 32, 32 )
-42/tile_mode = 2
-42/autotile/icon_coordinate = Vector2( 0, 0 )
-42/autotile/tile_size = Vector2( 32, 32 )
-42/autotile/spacing = 0
-42/autotile/occluder_map = [  ]
-42/autotile/navpoly_map = [  ]
-42/autotile/priority_map = [  ]
-42/autotile/z_index_map = [  ]
-42/occluder_offset = Vector2( 0, 0 )
-42/navigation_offset = Vector2( 0, 0 )
-42/shape_offset = Vector2( 0, 0 )
-42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-42/shape = SubResource( 22 )
-42/shape_one_way = false
-42/shape_one_way_margin = 1.0
-42/shapes = [ {
+68/z_index = 0
+69/name = "Room_Builder_3d_walls_32x32.png 69"
+69/texture = ExtResource( 24 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 384, 128, 32, 32 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape = SubResource( 89 )
+69/shape_one_way = false
+69/shape_one_way_margin = 1.0
+69/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 89 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-42/z_index = 0
-43/name = "Room_Builder_borders_32x32.png 43"
-43/texture = SubResource( 33 )
-43/tex_offset = Vector2( 0, 0 )
-43/modulate = Color( 1, 1, 1, 1 )
-43/region = Rect2( 256, 64, 32, 32 )
-43/tile_mode = 2
-43/autotile/icon_coordinate = Vector2( 0, 0 )
-43/autotile/tile_size = Vector2( 32, 32 )
-43/autotile/spacing = 0
-43/autotile/occluder_map = [  ]
-43/autotile/navpoly_map = [  ]
-43/autotile/priority_map = [  ]
-43/autotile/z_index_map = [  ]
-43/occluder_offset = Vector2( 0, 0 )
-43/navigation_offset = Vector2( 0, 0 )
-43/shape_offset = Vector2( 0, 0 )
-43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-43/shape = SubResource( 23 )
-43/shape_one_way = false
-43/shape_one_way_margin = 1.0
-43/shapes = [ {
+69/z_index = 0
+70/name = "Room_Builder_borders_32x32.png 70"
+70/texture = ExtResource( 26 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 192, 32, 32, 32 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 0, 0 )
+70/navigation_offset = Vector2( 0, 0 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape = SubResource( 90 )
+70/shape_one_way = false
+70/shape_one_way_margin = 1.0
+70/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 90 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-43/z_index = 0
-44/name = "Room_Builder_borders_32x32.png 44"
-44/texture = SubResource( 33 )
-44/tex_offset = Vector2( 0, 0 )
-44/modulate = Color( 1, 1, 1, 1 )
-44/region = Rect2( 256, 96, 32, 32 )
-44/tile_mode = 2
-44/autotile/icon_coordinate = Vector2( 0, 0 )
-44/autotile/tile_size = Vector2( 32, 32 )
-44/autotile/spacing = 0
-44/autotile/occluder_map = [  ]
-44/autotile/navpoly_map = [  ]
-44/autotile/priority_map = [  ]
-44/autotile/z_index_map = [  ]
-44/occluder_offset = Vector2( 0, 0 )
-44/navigation_offset = Vector2( 0, 0 )
-44/shape_offset = Vector2( 0, 0 )
-44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-44/shape = SubResource( 24 )
-44/shape_one_way = false
-44/shape_one_way_margin = 1.0
-44/shapes = [ {
+70/z_index = 0
+71/name = "Room_Builder_borders_32x32.png 71"
+71/texture = ExtResource( 26 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 224, 32, 32, 32 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 0, 0 )
+71/navigation_offset = Vector2( 0, 0 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape = SubResource( 91 )
+71/shape_one_way = false
+71/shape_one_way_margin = 1.0
+71/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 91 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-44/z_index = 0
-45/name = "Room_Builder_borders_32x32.png 45"
-45/texture = SubResource( 33 )
-45/tex_offset = Vector2( 0, 0 )
-45/modulate = Color( 1, 1, 1, 1 )
-45/region = Rect2( 192, 96, 32, 32 )
-45/tile_mode = 2
-45/autotile/icon_coordinate = Vector2( 0, 0 )
-45/autotile/tile_size = Vector2( 32, 32 )
-45/autotile/spacing = 0
-45/autotile/occluder_map = [  ]
-45/autotile/navpoly_map = [  ]
-45/autotile/priority_map = [  ]
-45/autotile/z_index_map = [  ]
-45/occluder_offset = Vector2( 0, 0 )
-45/navigation_offset = Vector2( 0, 0 )
-45/shape_offset = Vector2( 0, 0 )
-45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-45/shape = SubResource( 25 )
-45/shape_one_way = false
-45/shape_one_way_margin = 1.0
-45/shapes = [ {
+71/z_index = 0
+72/name = "Room_Builder_borders_32x32.png 72"
+72/texture = ExtResource( 26 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 256, 32, 32, 32 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 0, 0 )
+72/navigation_offset = Vector2( 0, 0 )
+72/shape_offset = Vector2( 0, 0 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+72/shape = SubResource( 92 )
+72/shape_one_way = false
+72/shape_one_way_margin = 1.0
+72/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 92 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-45/z_index = 0
-46/name = "Room_Builder_borders_32x32.png 46"
-46/texture = SubResource( 33 )
-46/tex_offset = Vector2( 0, 0 )
-46/modulate = Color( 1, 1, 1, 1 )
-46/region = Rect2( 224, 96, 32, 32 )
-46/tile_mode = 2
-46/autotile/icon_coordinate = Vector2( 0, 0 )
-46/autotile/tile_size = Vector2( 32, 32 )
-46/autotile/spacing = 0
-46/autotile/occluder_map = [  ]
-46/autotile/navpoly_map = [  ]
-46/autotile/priority_map = [  ]
-46/autotile/z_index_map = [  ]
-46/occluder_offset = Vector2( 0, 0 )
-46/navigation_offset = Vector2( 0, 0 )
-46/shape_offset = Vector2( 0, 0 )
-46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-46/shape = SubResource( 26 )
-46/shape_one_way = false
-46/shape_one_way_margin = 1.0
-46/shapes = [ {
+72/z_index = 0
+73/name = "Room_Builder_borders_32x32.png 73"
+73/texture = ExtResource( 26 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 192, 64, 32, 32 )
+73/tile_mode = 0
+73/occluder_offset = Vector2( 0, 0 )
+73/navigation_offset = Vector2( 0, 0 )
+73/shape_offset = Vector2( 0, 0 )
+73/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+73/shape = SubResource( 93 )
+73/shape_one_way = false
+73/shape_one_way_margin = 1.0
+73/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 93 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-46/z_index = 0
-47/name = "Room_Builder_3d_walls_32x32.png 47"
-47/texture = SubResource( 32 )
-47/tex_offset = Vector2( 0, 0 )
-47/modulate = Color( 1, 1, 1, 1 )
-47/region = Rect2( 448, 128, 32, 32 )
-47/tile_mode = 2
-47/autotile/icon_coordinate = Vector2( 0, 0 )
-47/autotile/tile_size = Vector2( 32, 32 )
-47/autotile/spacing = 0
-47/autotile/occluder_map = [  ]
-47/autotile/navpoly_map = [  ]
-47/autotile/priority_map = [  ]
-47/autotile/z_index_map = [  ]
-47/occluder_offset = Vector2( 0, 0 )
-47/navigation_offset = Vector2( 0, 0 )
-47/shape_offset = Vector2( 0, 0 )
-47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-47/shape_one_way = false
-47/shape_one_way_margin = 0.0
-47/shapes = [  ]
-47/z_index = 0
-48/name = "Room_Builder_Walls_32x32.png 48"
-48/texture = SubResource( 34 )
-48/tex_offset = Vector2( 0, 0 )
-48/modulate = Color( 1, 1, 1, 1 )
-48/region = Rect2( 32, 128, 32, 32 )
-48/tile_mode = 2
-48/autotile/icon_coordinate = Vector2( 0, 0 )
-48/autotile/tile_size = Vector2( 32, 32 )
-48/autotile/spacing = 0
-48/autotile/occluder_map = [  ]
-48/autotile/navpoly_map = [  ]
-48/autotile/priority_map = [  ]
-48/autotile/z_index_map = [  ]
-48/occluder_offset = Vector2( 0, 0 )
-48/navigation_offset = Vector2( 0, 0 )
-48/shape_offset = Vector2( 0, 0 )
-48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-48/shape = SubResource( 27 )
-48/shape_one_way = false
-48/shape_one_way_margin = 1.0
-48/shapes = [ {
+73/z_index = 0
+74/name = "Room_Builder_borders_32x32.png 74"
+74/texture = ExtResource( 26 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( 256, 64, 32, 32 )
+74/tile_mode = 0
+74/occluder_offset = Vector2( 0, 0 )
+74/navigation_offset = Vector2( 0, 0 )
+74/shape_offset = Vector2( 0, 0 )
+74/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+74/shape = SubResource( 94 )
+74/shape_one_way = false
+74/shape_one_way_margin = 1.0
+74/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 94 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-48/z_index = 0
-49/name = "Room_Builder_Walls_32x32.png 49"
-49/texture = SubResource( 34 )
-49/tex_offset = Vector2( 0, 0 )
-49/modulate = Color( 1, 1, 1, 1 )
-49/region = Rect2( 32, 160, 32, 32 )
-49/tile_mode = 2
-49/autotile/icon_coordinate = Vector2( 0, 0 )
-49/autotile/tile_size = Vector2( 32, 32 )
-49/autotile/spacing = 0
-49/autotile/occluder_map = [  ]
-49/autotile/navpoly_map = [  ]
-49/autotile/priority_map = [  ]
-49/autotile/z_index_map = [  ]
-49/occluder_offset = Vector2( 0, 0 )
-49/navigation_offset = Vector2( 0, 0 )
-49/shape_offset = Vector2( 0, 0 )
-49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-49/shape = SubResource( 28 )
-49/shape_one_way = false
-49/shape_one_way_margin = 1.0
-49/shapes = [ {
+74/z_index = 0
+75/name = "Room_Builder_borders_32x32.png 75"
+75/texture = ExtResource( 26 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 224, 96, 32, 32 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 0, 0 )
+75/navigation_offset = Vector2( 0, 0 )
+75/shape_offset = Vector2( 0, 0 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+75/shape = SubResource( 95 )
+75/shape_one_way = false
+75/shape_one_way_margin = 1.0
+75/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 95 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-49/z_index = 0
-50/name = "Room_Builder_Walls_32x32.png 50"
-50/texture = SubResource( 34 )
-50/tex_offset = Vector2( 0, 0 )
-50/modulate = Color( 1, 1, 1, 1 )
-50/region = Rect2( 160, 128, 32, 32 )
-50/tile_mode = 2
-50/autotile/icon_coordinate = Vector2( 0, 0 )
-50/autotile/tile_size = Vector2( 32, 32 )
-50/autotile/spacing = 0
-50/autotile/occluder_map = [  ]
-50/autotile/navpoly_map = [  ]
-50/autotile/priority_map = [  ]
-50/autotile/z_index_map = [  ]
-50/occluder_offset = Vector2( 0, 0 )
-50/navigation_offset = Vector2( 0, 0 )
-50/shape_offset = Vector2( 0, 0 )
-50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-50/shape = SubResource( 29 )
-50/shape_one_way = false
-50/shape_one_way_margin = 1.0
-50/shapes = [ {
+75/z_index = 0
+76/name = "Room_Builder_borders_32x32.png 76"
+76/texture = ExtResource( 26 )
+76/tex_offset = Vector2( 0, 0 )
+76/modulate = Color( 1, 1, 1, 1 )
+76/region = Rect2( 192, 96, 32, 32 )
+76/tile_mode = 0
+76/occluder_offset = Vector2( 0, 0 )
+76/navigation_offset = Vector2( 0, 0 )
+76/shape_offset = Vector2( 0, 0 )
+76/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+76/shape = SubResource( 96 )
+76/shape_one_way = false
+76/shape_one_way_margin = 1.0
+76/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 96 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-50/z_index = 0
-51/name = "Room_Builder_Floors_32x32.png 51"
-51/texture = SubResource( 35 )
-51/tex_offset = Vector2( 0, 0 )
-51/modulate = Color( 1, 1, 1, 1 )
-51/region = Rect2( 416, 192, 32, 32 )
-51/tile_mode = 2
-51/autotile/icon_coordinate = Vector2( 0, 0 )
-51/autotile/tile_size = Vector2( 32, 32 )
-51/autotile/spacing = 0
-51/autotile/occluder_map = [  ]
-51/autotile/navpoly_map = [  ]
-51/autotile/priority_map = [  ]
-51/autotile/z_index_map = [  ]
-51/occluder_offset = Vector2( 0, 0 )
-51/navigation_offset = Vector2( 0, 0 )
-51/shape_offset = Vector2( 0, 0 )
-51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-51/shape_one_way = false
-51/shape_one_way_margin = 0.0
-51/shapes = [  ]
-51/z_index = 0
-52/name = "Room_Builder_Floors_32x32.png 52"
-52/texture = SubResource( 35 )
-52/tex_offset = Vector2( 0, 0 )
-52/modulate = Color( 1, 1, 1, 1 )
-52/region = Rect2( 384, 192, 32, 32 )
-52/tile_mode = 2
-52/autotile/icon_coordinate = Vector2( 0, 0 )
-52/autotile/tile_size = Vector2( 32, 32 )
-52/autotile/spacing = 0
-52/autotile/occluder_map = [  ]
-52/autotile/navpoly_map = [  ]
-52/autotile/priority_map = [  ]
-52/autotile/z_index_map = [  ]
-52/occluder_offset = Vector2( 0, 0 )
-52/navigation_offset = Vector2( 0, 0 )
-52/shape_offset = Vector2( 0, 0 )
-52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-52/shape_one_way = false
-52/shape_one_way_margin = 0.0
-52/shapes = [  ]
-52/z_index = 0
-53/name = "Room_Builder_Floors_32x32.png 53"
-53/texture = SubResource( 35 )
-53/tex_offset = Vector2( 0, 0 )
-53/modulate = Color( 1, 1, 1, 1 )
-53/region = Rect2( 448, 192, 32, 32 )
-53/tile_mode = 2
-53/autotile/icon_coordinate = Vector2( 0, 0 )
-53/autotile/tile_size = Vector2( 32, 32 )
-53/autotile/spacing = 0
-53/autotile/occluder_map = [  ]
-53/autotile/navpoly_map = [  ]
-53/autotile/priority_map = [  ]
-53/autotile/z_index_map = [  ]
-53/occluder_offset = Vector2( 0, 0 )
-53/navigation_offset = Vector2( 0, 0 )
-53/shape_offset = Vector2( 0, 0 )
-53/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-53/shape_one_way = false
-53/shape_one_way_margin = 0.0
-53/shapes = [  ]
-53/z_index = 0
-54/name = "Room_Builder_Floors_32x32.png 54"
-54/texture = SubResource( 35 )
-54/tex_offset = Vector2( 0, 0 )
-54/modulate = Color( 1, 1, 1, 1 )
-54/region = Rect2( 384, 224, 32, 32 )
-54/tile_mode = 2
-54/autotile/icon_coordinate = Vector2( 0, 0 )
-54/autotile/tile_size = Vector2( 32, 32 )
-54/autotile/spacing = 0
-54/autotile/occluder_map = [  ]
-54/autotile/navpoly_map = [  ]
-54/autotile/priority_map = [  ]
-54/autotile/z_index_map = [  ]
-54/occluder_offset = Vector2( 0, 0 )
-54/navigation_offset = Vector2( 0, 0 )
-54/shape_offset = Vector2( 0, 0 )
-54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-54/shape_one_way = false
-54/shape_one_way_margin = 0.0
-54/shapes = [  ]
-54/z_index = 0
-55/name = "Room_Builder_Floors_32x32.png 55"
-55/texture = SubResource( 35 )
-55/tex_offset = Vector2( 0, 0 )
-55/modulate = Color( 1, 1, 1, 1 )
-55/region = Rect2( 448, 224, 32, 32 )
-55/tile_mode = 2
-55/autotile/icon_coordinate = Vector2( 0, 0 )
-55/autotile/tile_size = Vector2( 32, 32 )
-55/autotile/spacing = 0
-55/autotile/occluder_map = [  ]
-55/autotile/navpoly_map = [  ]
-55/autotile/priority_map = [  ]
-55/autotile/z_index_map = [  ]
-55/occluder_offset = Vector2( 0, 0 )
-55/navigation_offset = Vector2( 0, 0 )
-55/shape_offset = Vector2( 0, 0 )
-55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-55/shape_one_way = false
-55/shape_one_way_margin = 0.0
-55/shapes = [  ]
-55/z_index = 0
-56/name = "Room_Builder_Floors_32x32.png 56"
-56/texture = SubResource( 35 )
-56/tex_offset = Vector2( 0, 0 )
-56/modulate = Color( 1, 1, 1, 1 )
-56/region = Rect2( 416, 224, 32, 32 )
-56/tile_mode = 2
-56/autotile/icon_coordinate = Vector2( 0, 0 )
-56/autotile/tile_size = Vector2( 32, 32 )
-56/autotile/spacing = 0
-56/autotile/occluder_map = [  ]
-56/autotile/navpoly_map = [  ]
-56/autotile/priority_map = [  ]
-56/autotile/z_index_map = [  ]
-56/occluder_offset = Vector2( 0, 0 )
-56/navigation_offset = Vector2( 0, 0 )
-56/shape_offset = Vector2( 0, 0 )
-56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-56/shape_one_way = false
-56/shape_one_way_margin = 0.0
-56/shapes = [  ]
-56/z_index = 0
-57/name = "Room_Builder_Floors_32x32.png 57"
-57/texture = SubResource( 35 )
-57/tex_offset = Vector2( 0, 0 )
-57/modulate = Color( 1, 1, 1, 1 )
-57/region = Rect2( 416, 928, 32, 32 )
-57/tile_mode = 2
-57/autotile/icon_coordinate = Vector2( 0, 0 )
-57/autotile/tile_size = Vector2( 32, 32 )
-57/autotile/spacing = 0
-57/autotile/occluder_map = [  ]
-57/autotile/navpoly_map = [  ]
-57/autotile/priority_map = [  ]
-57/autotile/z_index_map = [  ]
-57/occluder_offset = Vector2( 0, 0 )
-57/navigation_offset = Vector2( 0, 0 )
-57/shape_offset = Vector2( 0, 0 )
-57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-57/shape_one_way = false
-57/shape_one_way_margin = 0.0
-57/shapes = [  ]
-57/z_index = 0
-58/name = "Room_Builder_Floors_32x32.png 58"
-58/texture = SubResource( 35 )
-58/tex_offset = Vector2( 0, 0 )
-58/modulate = Color( 1, 1, 1, 1 )
-58/region = Rect2( 384, 928, 32, 32 )
-58/tile_mode = 2
-58/autotile/icon_coordinate = Vector2( 0, 0 )
-58/autotile/tile_size = Vector2( 32, 32 )
-58/autotile/spacing = 0
-58/autotile/occluder_map = [  ]
-58/autotile/navpoly_map = [  ]
-58/autotile/priority_map = [  ]
-58/autotile/z_index_map = [  ]
-58/occluder_offset = Vector2( 0, 0 )
-58/navigation_offset = Vector2( 0, 0 )
-58/shape_offset = Vector2( 0, 0 )
-58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-58/shape_one_way = false
-58/shape_one_way_margin = 0.0
-58/shapes = [  ]
-58/z_index = 0
-59/name = "Room_Builder_Floors_32x32.png 59"
-59/texture = SubResource( 35 )
-59/tex_offset = Vector2( 0, 0 )
-59/modulate = Color( 1, 1, 1, 1 )
-59/region = Rect2( 384, 896, 32, 32 )
-59/tile_mode = 2
-59/autotile/icon_coordinate = Vector2( 0, 0 )
-59/autotile/tile_size = Vector2( 32, 32 )
-59/autotile/spacing = 0
-59/autotile/occluder_map = [  ]
-59/autotile/navpoly_map = [  ]
-59/autotile/priority_map = [  ]
-59/autotile/z_index_map = [  ]
-59/occluder_offset = Vector2( 0, 0 )
-59/navigation_offset = Vector2( 0, 0 )
-59/shape_offset = Vector2( 0, 0 )
-59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-59/shape_one_way = false
-59/shape_one_way_margin = 0.0
-59/shapes = [  ]
-59/z_index = 0
-60/name = "Room_Builder_Floors_32x32.png 60"
-60/texture = SubResource( 35 )
-60/tex_offset = Vector2( 0, 0 )
-60/modulate = Color( 1, 1, 1, 1 )
-60/region = Rect2( 416, 896, 32, 32 )
-60/tile_mode = 2
-60/autotile/icon_coordinate = Vector2( 0, 0 )
-60/autotile/tile_size = Vector2( 32, 32 )
-60/autotile/spacing = 0
-60/autotile/occluder_map = [  ]
-60/autotile/navpoly_map = [  ]
-60/autotile/priority_map = [  ]
-60/autotile/z_index_map = [  ]
-60/occluder_offset = Vector2( 0, 0 )
-60/navigation_offset = Vector2( 0, 0 )
-60/shape_offset = Vector2( 0, 0 )
-60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-60/shape_one_way = false
-60/shape_one_way_margin = 0.0
-60/shapes = [  ]
-60/z_index = 0
-61/name = "Room_Builder_Floors_32x32.png 61"
-61/texture = SubResource( 35 )
-61/tex_offset = Vector2( 0, 0 )
-61/modulate = Color( 1, 1, 1, 1 )
-61/region = Rect2( 448, 896, 32, 32 )
-61/tile_mode = 2
-61/autotile/icon_coordinate = Vector2( 0, 0 )
-61/autotile/tile_size = Vector2( 32, 32 )
-61/autotile/spacing = 0
-61/autotile/occluder_map = [  ]
-61/autotile/navpoly_map = [  ]
-61/autotile/priority_map = [  ]
-61/autotile/z_index_map = [  ]
-61/occluder_offset = Vector2( 0, 0 )
-61/navigation_offset = Vector2( 0, 0 )
-61/shape_offset = Vector2( 0, 0 )
-61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-61/shape_one_way = false
-61/shape_one_way_margin = 0.0
-61/shapes = [  ]
-61/z_index = 0
-62/name = "Room_Builder_Floors_32x32.png 62"
-62/texture = SubResource( 35 )
-62/tex_offset = Vector2( 0, 0 )
-62/modulate = Color( 1, 1, 1, 1 )
-62/region = Rect2( 448, 928, 32, 32 )
-62/tile_mode = 2
-62/autotile/icon_coordinate = Vector2( 0, 0 )
-62/autotile/tile_size = Vector2( 32, 32 )
-62/autotile/spacing = 0
-62/autotile/occluder_map = [  ]
-62/autotile/navpoly_map = [  ]
-62/autotile/priority_map = [  ]
-62/autotile/z_index_map = [  ]
-62/occluder_offset = Vector2( 0, 0 )
-62/navigation_offset = Vector2( 0, 0 )
-62/shape_offset = Vector2( 0, 0 )
-62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-62/shape_one_way = false
-62/shape_one_way_margin = 0.0
-62/shapes = [  ]
-62/z_index = 0
-63/name = "Room_Builder_Floors_32x32.png 63"
-63/texture = SubResource( 35 )
-63/tex_offset = Vector2( 0, 0 )
-63/modulate = Color( 1, 1, 1, 1 )
-63/region = Rect2( 416, 992, 32, 32 )
-63/tile_mode = 2
-63/autotile/icon_coordinate = Vector2( 0, 0 )
-63/autotile/tile_size = Vector2( 32, 32 )
-63/autotile/spacing = 0
-63/autotile/occluder_map = [  ]
-63/autotile/navpoly_map = [  ]
-63/autotile/priority_map = [  ]
-63/autotile/z_index_map = [  ]
-63/occluder_offset = Vector2( 0, 0 )
-63/navigation_offset = Vector2( 0, 0 )
-63/shape_offset = Vector2( 0, 0 )
-63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-63/shape_one_way = false
-63/shape_one_way_margin = 0.0
-63/shapes = [  ]
-63/z_index = 0
+76/z_index = 0
+77/name = "Room_Builder_borders_32x32.png 77"
+77/texture = ExtResource( 26 )
+77/tex_offset = Vector2( 0, 0 )
+77/modulate = Color( 1, 1, 1, 1 )
+77/region = Rect2( 256, 96, 32, 32 )
+77/tile_mode = 0
+77/occluder_offset = Vector2( 0, 0 )
+77/navigation_offset = Vector2( 0, 0 )
+77/shape_offset = Vector2( 0, 0 )
+77/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+77/shape = SubResource( 97 )
+77/shape_one_way = false
+77/shape_one_way_margin = 1.0
+77/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 97 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+77/z_index = 0
+78/name = "Room_Builder_Walls_32x32.png 78"
+78/texture = ExtResource( 23 )
+78/tex_offset = Vector2( 0, 0 )
+78/modulate = Color( 1, 1, 1, 1 )
+78/region = Rect2( 32, 128, 32, 32 )
+78/tile_mode = 0
+78/occluder_offset = Vector2( 0, 0 )
+78/navigation_offset = Vector2( 0, 0 )
+78/shape_offset = Vector2( 0, 0 )
+78/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+78/shape = SubResource( 98 )
+78/shape_one_way = false
+78/shape_one_way_margin = 1.0
+78/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 98 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+78/z_index = 0
+79/name = "Room_Builder_Walls_32x32.png 79"
+79/texture = ExtResource( 23 )
+79/tex_offset = Vector2( 0, 0 )
+79/modulate = Color( 1, 1, 1, 1 )
+79/region = Rect2( 32, 160, 32, 32 )
+79/tile_mode = 0
+79/occluder_offset = Vector2( 0, 0 )
+79/navigation_offset = Vector2( 0, 0 )
+79/shape_offset = Vector2( 0, 0 )
+79/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+79/shape = SubResource( 99 )
+79/shape_one_way = false
+79/shape_one_way_margin = 1.0
+79/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 99 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+79/z_index = 0
+80/name = "Room_Builder_Walls_32x32.png 80"
+80/texture = ExtResource( 23 )
+80/tex_offset = Vector2( 0, 0 )
+80/modulate = Color( 1, 1, 1, 1 )
+80/region = Rect2( 160, 128, 32, 32 )
+80/tile_mode = 0
+80/occluder_offset = Vector2( 0, 0 )
+80/navigation_offset = Vector2( 0, 0 )
+80/shape_offset = Vector2( 0, 0 )
+80/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+80/shape = SubResource( 100 )
+80/shape_one_way = false
+80/shape_one_way_margin = 1.0
+80/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 100 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+80/z_index = 0
+81/name = "Room_Builder_Floors_32x32.png 81"
+81/texture = ExtResource( 25 )
+81/tex_offset = Vector2( 0, 0 )
+81/modulate = Color( 1, 1, 1, 1 )
+81/region = Rect2( 384, 192, 32, 32 )
+81/tile_mode = 0
+81/occluder_offset = Vector2( 0, 0 )
+81/navigation_offset = Vector2( 0, 0 )
+81/shape_offset = Vector2( 0, 0 )
+81/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+81/shape_one_way = false
+81/shape_one_way_margin = 0.0
+81/shapes = [  ]
+81/z_index = 0
+82/name = "Room_Builder_Floors_32x32.png 82"
+82/texture = ExtResource( 25 )
+82/tex_offset = Vector2( 0, 0 )
+82/modulate = Color( 1, 1, 1, 1 )
+82/region = Rect2( 416, 192, 32, 32 )
+82/tile_mode = 0
+82/occluder_offset = Vector2( 0, 0 )
+82/navigation_offset = Vector2( 0, 0 )
+82/shape_offset = Vector2( 0, 0 )
+82/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+82/shape_one_way = false
+82/shape_one_way_margin = 0.0
+82/shapes = [  ]
+82/z_index = 0
+83/name = "Room_Builder_Floors_32x32.png 83"
+83/texture = ExtResource( 25 )
+83/tex_offset = Vector2( 0, 0 )
+83/modulate = Color( 1, 1, 1, 1 )
+83/region = Rect2( 448, 192, 32, 32 )
+83/tile_mode = 0
+83/occluder_offset = Vector2( 0, 0 )
+83/navigation_offset = Vector2( 0, 0 )
+83/shape_offset = Vector2( 0, 0 )
+83/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+83/shape_one_way = false
+83/shape_one_way_margin = 0.0
+83/shapes = [  ]
+83/z_index = 0
+84/name = "Room_Builder_Floors_32x32.png 84"
+84/texture = ExtResource( 25 )
+84/tex_offset = Vector2( 0, 0 )
+84/modulate = Color( 1, 1, 1, 1 )
+84/region = Rect2( 448, 224, 32, 32 )
+84/tile_mode = 0
+84/occluder_offset = Vector2( 0, 0 )
+84/navigation_offset = Vector2( 0, 0 )
+84/shape_offset = Vector2( 0, 0 )
+84/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+84/shape_one_way = false
+84/shape_one_way_margin = 0.0
+84/shapes = [  ]
+84/z_index = 0
+85/name = "Room_Builder_Floors_32x32.png 85"
+85/texture = ExtResource( 25 )
+85/tex_offset = Vector2( 0, 0 )
+85/modulate = Color( 1, 1, 1, 1 )
+85/region = Rect2( 384, 224, 32, 32 )
+85/tile_mode = 0
+85/occluder_offset = Vector2( 0, 0 )
+85/navigation_offset = Vector2( 0, 0 )
+85/shape_offset = Vector2( 0, 0 )
+85/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+85/shape_one_way = false
+85/shape_one_way_margin = 0.0
+85/shapes = [  ]
+85/z_index = 0
+86/name = "Room_Builder_Floors_32x32.png 86"
+86/texture = ExtResource( 25 )
+86/tex_offset = Vector2( 0, 0 )
+86/modulate = Color( 1, 1, 1, 1 )
+86/region = Rect2( 416, 224, 32, 32 )
+86/tile_mode = 0
+86/occluder_offset = Vector2( 0, 0 )
+86/navigation_offset = Vector2( 0, 0 )
+86/shape_offset = Vector2( 0, 0 )
+86/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+86/shape_one_way = false
+86/shape_one_way_margin = 0.0
+86/shapes = [  ]
+86/z_index = 0
+87/name = "Room_Builder_Floors_32x32.png 87"
+87/texture = ExtResource( 25 )
+87/tex_offset = Vector2( 0, 0 )
+87/modulate = Color( 1, 1, 1, 1 )
+87/region = Rect2( 416, 928, 32, 32 )
+87/tile_mode = 0
+87/occluder_offset = Vector2( 0, 0 )
+87/navigation_offset = Vector2( 0, 0 )
+87/shape_offset = Vector2( 0, 0 )
+87/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+87/shape_one_way = false
+87/shape_one_way_margin = 0.0
+87/shapes = [  ]
+87/z_index = 0
+88/name = "Room_Builder_Floors_32x32.png 88"
+88/texture = ExtResource( 25 )
+88/tex_offset = Vector2( 0, 0 )
+88/modulate = Color( 1, 1, 1, 1 )
+88/region = Rect2( 288, 992, 32, 32 )
+88/tile_mode = 0
+88/occluder_offset = Vector2( 0, 0 )
+88/navigation_offset = Vector2( 0, 0 )
+88/shape_offset = Vector2( 0, 0 )
+88/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+88/shape_one_way = false
+88/shape_one_way_margin = 0.0
+88/shapes = [  ]
+88/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=43]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 16, 64, 16 )
@@ -2249,13 +2001,13 @@ script = ExtResource( 13 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 14, 18, 0, 65550, 29, 0, 131086, 23, 0, 196622, 63, 0, 262158, 63, 0, 327694, 63, 0, 393230, 63, 0, 458766, 63, 0, 524302, 63, 0, 589838, 48, 0, 655374, 49, 0, 720910, 59, 0, 786446, 57, 0, 851982, 57, 0, 917518, 48, 0, 917521, 50, 0, 917522, 50, 0, 917523, 50, 0, 917524, 50, 0, 983054, 49, 0, 1048590, 57, 0, 1114126, 57, 0, 1179662, 57, 0, 1245198, 46, 0 )
+tile_data = PoolIntArray( 14, 65, 0, 65550, 69, 0, 131086, 66, 0, 196622, 88, 0, 327694, 86, 0, 393230, 88, 0, 458766, 88, 0, 524302, 88, 0, 589838, 64, 0, 655374, 66, 0, 720910, 87, 0, 720911, 87, 0, 786446, 87, 0, 851982, 87, 0, 917518, 65, 0, 917521, 50, 0, 917522, 50, 0, 917523, 50, 0, 917524, 50, 0, 983054, 66, 0, 1048590, 86, 0, 1114126, 57, 0, 1179662, 57, 0, 1245198, 46, 0 )
 
 [node name="Walls" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 0, 39, 0, 1, 48, 0, 2, 48, 0, 3, 48, 0, 4, 48, 0, 5, 48, 0, 6, 48, 0, 7, 48, 0, 8, 48, 0, 9, 48, 0, 10, 48, 0, 11, 48, 0, 12, 48, 0, 13, 48, 0, 14, 43, 0, 15, 48, 0, 16, 48, 0, 17, 48, 0, 18, 48, 0, 19, 48, 0, 20, 48, 0, 21, 48, 0, 22, 48, 0, 23, 48, 0, 24, 41, 0, 65536, 42, 0, 65537, 50, 0, 65538, 50, 0, 65539, 50, 0, 65540, 50, 0, 65541, 50, 0, 65542, 50, 0, 65543, 50, 0, 65544, 50, 0, 65545, 50, 0, 65546, 50, 0, 65547, 50, 0, 65548, 50, 0, 65549, 50, 0, 65550, 43, 0, 65551, 50, 0, 65552, 50, 0, 65553, 50, 0, 65554, 50, 0, 65555, 50, 0, 65556, 50, 0, 65557, 50, 0, 65558, 50, 0, 65559, 50, 0, 65560, 43, 0, 131072, 42, 0, 131073, 49, 0, 131074, 49, 0, 131075, 49, 0, 131076, 49, 0, 131077, 49, 0, 131078, 49, 0, 131079, 49, 0, 131080, 49, 0, 131081, 49, 0, 131082, 49, 0, 131083, 49, 0, 131084, 49, 0, 131085, 49, 0, 131086, 43, 0, 131087, 49, 0, 131088, 49, 0, 131089, 49, 0, 131090, 49, 0, 131091, 49, 0, 131092, 49, 0, 131093, 49, 0, 131094, 49, 0, 131095, 49, 0, 131096, 43, 0, 196608, 42, 0, 196609, 52, 0, 196610, 51, 0, 196611, 51, 0, 196612, 51, 0, 196613, 51, 0, 196614, 51, 0, 196615, 51, 0, 196616, 51, 0, 196617, 51, 0, 196618, 51, 0, 196619, 51, 0, 196620, 51, 0, 196621, 51, 0, 196622, 43, 0, 196623, 63, 0, 196624, 63, 0, 196625, 63, 0, 196626, 63, 0, 196627, 63, 0, 196628, 63, 0, 196629, 63, 0, 196630, 63, 0, 196631, 63, 0, 196632, 43, 0, 262144, 42, 0, 262145, 54, 0, 262146, 56, 0, 262147, 56, 0, 262148, 56, 0, 262149, 56, 0, 262150, 56, 0, 262151, 56, 0, 262152, 56, 0, 262153, 56, 0, 262154, 56, 0, 262155, 56, 0, 262156, 56, 0, 262157, 56, 0, 262158, 63, 0, 262159, 63, 0, 262160, 63, 0, 262161, 63, 0, 262162, 63, 0, 262163, 63, 0, 262164, 63, 0, 262165, 63, 0, 262166, 63, 0, 262167, 63, 0, 262168, 43, 0, 327680, 55, 0, 327681, 54, 0, 327682, 56, 0, 327683, 56, 0, 327684, 56, 0, 327685, 56, 0, 327686, 56, 0, 327687, 56, 0, 327688, 56, 0, 327689, 56, 0, 327690, 56, 0, 327691, 56, 0, 327692, 56, 0, 327693, 56, 0, 327694, 63, 0, 327695, 63, 0, 327696, 63, 0, 327697, 63, 0, 327698, 63, 0, 327699, 63, 0, 327700, 63, 0, 327701, 63, 0, 327702, 63, 0, 327703, 63, 0, 327704, 43, 0, 393216, 55, 0, 393217, 54, 0, 393218, 56, 0, 393219, 56, 0, 393220, 56, 0, 393221, 56, 0, 393222, 56, 0, 393223, 56, 0, 393224, 56, 0, 393225, 56, 0, 393226, 56, 0, 393227, 56, 0, 393228, 56, 0, 393229, 56, 0, 393230, 43, 0, 393231, 63, 0, 393232, 63, 0, 393233, 63, 0, 393234, 63, 0, 393235, 63, 0, 393236, 63, 0, 393237, 63, 0, 393238, 63, 0, 393239, 63, 0, 393240, 43, 0, 458752, 42, 0, 458753, 54, 0, 458754, 56, 0, 458755, 56, 0, 458756, 56, 0, 458757, 56, 0, 458758, 56, 0, 458759, 56, 0, 458760, 56, 0, 458761, 56, 0, 458762, 56, 0, 458763, 56, 0, 458764, 56, 0, 458765, 56, 0, 458766, 43, 0, 458767, 63, 0, 458768, 63, 0, 458769, 63, 0, 458770, 63, 0, 458771, 63, 0, 458772, 63, 0, 458773, 63, 0, 458774, 63, 0, 458775, 63, 0, 458776, 43, 0, 524288, 42, 0, 524289, 54, 0, 524290, 56, 0, 524291, 56, 0, 524292, 56, 0, 524293, 56, 0, 524294, 56, 0, 524295, 56, 0, 524296, 56, 0, 524297, 56, 0, 524298, 56, 0, 524299, 56, 0, 524300, 56, 0, 524301, 56, 0, 524302, 43, 0, 524303, 63, 0, 524304, 63, 0, 524305, 63, 0, 524306, 63, 0, 524307, 63, 0, 524308, 63, 0, 524309, 63, 0, 524310, 63, 0, 524311, 63, 0, 524312, 43, 0, 589824, 42, 0, 589825, 54, 0, 589826, 56, 0, 589827, 56, 0, 589828, 56, 0, 589829, 56, 0, 589830, 56, 0, 589831, 56, 0, 589832, 56, 0, 589833, 56, 0, 589834, 56, 0, 589835, 56, 0, 589836, 56, 0, 589837, 56, 0, 589838, 43, 0, 589839, 48, 0, 589840, 48, 0, 589841, 48, 0, 589842, 48, 0, 589843, 48, 0, 589844, 48, 0, 589845, 48, 0, 589846, 48, 0, 589847, 48, 0, 589848, 43, 0, 655360, 42, 0, 655361, 54, 0, 655362, 56, 0, 655363, 56, 0, 655364, 56, 0, 655365, 56, 0, 655366, 56, 0, 655367, 56, 0, 655368, 56, 0, 655369, 56, 0, 655370, 56, 0, 655371, 56, 0, 655372, 56, 0, 655373, 56, 0, 655374, 43, 0, 655375, 49, 0, 655376, 49, 0, 655377, 49, 0, 655378, 49, 0, 655379, 49, 0, 655380, 49, 0, 655381, 49, 0, 655382, 49, 0, 655383, 49, 0, 655384, 43, 0, 720896, 42, 0, 720897, 48, 0, 720898, 48, 0, 720899, 48, 0, 720900, 48, 0, 720901, 48, 0, 720902, 48, 0, 720903, 48, 0, 720904, 56, 0, 720905, 48, 0, 720906, 48, 0, 720907, 48, 0, 720908, 48, 0, 720909, 48, 0, 720910, 43, 0, 720911, 57, 0, 720912, 57, 0, 720913, 60, 0, 720914, 60, 0, 720915, 60, 0, 720916, 60, 0, 720917, 60, 0, 720918, 60, 0, 720919, 60, 0, 720920, 43, 0, 786432, 42, 0, 786433, 49, 0, 786434, 49, 0, 786435, 49, 0, 786436, 49, 0, 786437, 49, 0, 786438, 49, 0, 786439, 49, 0, 786440, 56, 0, 786441, 49, 0, 786442, 49, 0, 786443, 49, 0, 786444, 49, 0, 786445, 49, 0, 786446, 43, 0, 786447, 57, 0, 786448, 57, 0, 786449, 57, 0, 786450, 57, 0, 786451, 57, 0, 786452, 57, 0, 786453, 57, 0, 786454, 57, 0, 786455, 57, 0, 786456, 43, 0, 851968, 42, 0, 851969, 54, 0, 851970, 56, 0, 851971, 56, 0, 851972, 56, 0, 851973, 56, 0, 851974, 56, 0, 851975, 56, 0, 851976, 56, 0, 851977, 56, 0, 851978, 56, 0, 851979, 56, 0, 851980, 56, 0, 851981, 56, 0, 851982, 43, 0, 851983, 57, 0, 851984, 57, 0, 851985, 57, 0, 851986, 57, 0, 851987, 57, 0, 851988, 57, 0, 851989, 57, 0, 851990, 57, 0, 851991, 57, 0, 851992, 43, 0, 917504, 42, 0, 917505, 54, 0, 917506, 56, 0, 917507, 56, 0, 917508, 56, 0, 917509, 56, 0, 917510, 56, 0, 917511, 56, 0, 917512, 56, 0, 917513, 56, 0, 917514, 56, 0, 917515, 56, 0, 917516, 56, 0, 917517, 56, 0, 917518, 43, 0, 917519, 18, 0, 917520, 18, 0, 917521, 46, 0, 917522, 46, 0, 917523, 46, 0, 917524, 46, 0, 917525, 57, 0, 917526, 57, 0, 917527, 57, 0, 917528, 43, 0, 983040, 42, 0, 983041, 54, 0, 983042, 56, 0, 983043, 56, 0, 983044, 56, 0, 983045, 56, 0, 983046, 56, 0, 983047, 56, 0, 983048, 56, 0, 983049, 56, 0, 983050, 56, 0, 983051, 56, 0, 983052, 56, 0, 983053, 56, 0, 983054, 43, 0, 983055, 23, 0, 983056, 23, 0, 983057, 49, 0, 983058, 49, 0, 983059, 49, 0, 983060, 49, 0, 983061, 57, 0, 983062, 57, 0, 983063, 57, 0, 983064, 43, 0, 1048576, 42, 0, 1048577, 54, 0, 1048578, 56, 0, 1048579, 56, 0, 1048580, 56, 0, 1048581, 56, 0, 1048582, 56, 0, 1048583, 56, 0, 1048584, 56, 0, 1048585, 56, 0, 1048586, 56, 0, 1048587, 56, 0, 1048588, 56, 0, 1048589, 56, 0, 1048590, 43, 0, 1048591, 57, 0, 1048592, 57, 0, 1048593, 57, 0, 1048594, 57, 0, 1048595, 57, 0, 1048596, 57, 0, 1048597, 57, 0, 1048598, 57, 0, 1048599, 57, 0, 1048600, 43, 0, 1114112, 42, 0, 1114113, 54, 0, 1114114, 56, 0, 1114115, 56, 0, 1114116, 56, 0, 1114117, 56, 0, 1114118, 56, 0, 1114119, 56, 0, 1114120, 56, 0, 1114121, 56, 0, 1114122, 56, 0, 1114123, 56, 0, 1114124, 56, 0, 1114125, 56, 0, 1114126, 57, 0, 1114127, 57, 0, 1114128, 57, 0, 1114129, 57, 0, 1114130, 57, 0, 1114131, 57, 0, 1114132, 57, 0, 1114133, 57, 0, 1114134, 57, 0, 1114135, 57, 0, 1114136, 43, 0, 1179648, 42, 0, 1179649, 54, 0, 1179650, 56, 0, 1179651, 56, 0, 1179652, 56, 0, 1179653, 56, 0, 1179654, 56, 0, 1179655, 56, 0, 1179656, 56, 0, 1179657, 56, 0, 1179658, 56, 0, 1179659, 56, 0, 1179660, 56, 0, 1179661, 56, 0, 1179662, 43, 0, 1179663, 57, 0, 1179664, 57, 0, 1179665, 57, 0, 1179666, 57, 0, 1179667, 57, 0, 1179668, 57, 0, 1179669, 57, 0, 1179670, 57, 0, 1179671, 57, 0, 1179672, 43, 0, 1245184, 45, 0, 1245185, 40, 0, 1245186, 40, 0, 1245187, 40, 0, 1245188, 40, 0, 1245189, 40, 0, 1245190, 46, 0, 1245191, 46, 0, 1245192, 46, 0, 1245193, 46, 0, 1245194, 46, 0, 1245195, 46, 0, 1245196, 46, 0, 1245197, 46, 0, 1245198, 44, 0, 1245199, 46, 0, 1245200, 46, 0, 1245201, 46, 0, 1245202, 46, 0, 1245203, 46, 0, 1245204, 46, 0, 1245205, 46, 0, 1245206, 46, 0, 1245207, 46, 0, 1245208, 44, 0 )
+tile_data = PoolIntArray( 0, 70, 0, 1, 64, 0, 2, 64, 0, 3, 64, 0, 4, 64, 0, 5, 64, 0, 6, 64, 0, 7, 64, 0, 8, 64, 0, 9, 64, 0, 10, 64, 0, 11, 64, 0, 12, 64, 0, 13, 64, 0, 14, 74, 0, 15, 64, 0, 16, 64, 0, 17, 64, 0, 18, 64, 0, 19, 64, 0, 20, 64, 0, 21, 64, 0, 22, 64, 0, 23, 64, 0, 24, 72, 0, 65536, 70, 0, 65537, 69, 0, 65538, 69, 0, 65539, 69, 0, 65540, 69, 0, 65541, 69, 0, 65542, 69, 0, 65543, 69, 0, 65544, 69, 0, 65545, 69, 0, 65546, 69, 0, 65547, 69, 0, 65548, 69, 0, 65549, 69, 0, 65550, 74, 0, 65551, 69, 0, 65552, 69, 0, 65553, 69, 0, 65554, 69, 0, 65555, 69, 0, 65556, 69, 0, 65557, 69, 0, 65558, 69, 0, 65559, 69, 0, 65560, 74, 0, 131072, 73, 0, 131073, 66, 0, 131074, 66, 0, 131075, 66, 0, 131076, 66, 0, 131077, 66, 0, 131078, 66, 0, 131079, 66, 0, 131080, 66, 0, 131081, 66, 0, 131082, 66, 0, 131083, 66, 0, 131084, 66, 0, 131085, 66, 0, 131086, 74, 0, 131087, 66, 0, 131088, 66, 0, 131089, 66, 0, 131090, 66, 0, 131091, 66, 0, 131092, 66, 0, 131093, 66, 0, 131094, 66, 0, 131095, 66, 0, 131096, 74, 0, 196608, 73, 0, 196609, 86, 0, 196610, 86, 0, 196611, 86, 0, 196612, 86, 0, 196613, 86, 0, 196614, 86, 0, 196615, 86, 0, 196616, 86, 0, 196617, 86, 0, 196618, 86, 0, 196619, 86, 0, 196620, 86, 0, 196621, 86, 0, 196622, 74, 0, 196623, 88, 0, 196624, 88, 0, 196625, 88, 0, 196626, 88, 0, 196627, 88, 0, 196628, 88, 0, 196629, 88, 0, 196630, 88, 0, 196631, 88, 0, 196632, 74, 0, 262144, 73, 0, 262145, 86, 0, 262146, 86, 0, 262147, 86, 0, 262148, 86, 0, 262149, 86, 0, 262150, 86, 0, 262151, 86, 0, 262152, 86, 0, 262153, 86, 0, 262154, 86, 0, 262155, 86, 0, 262156, 86, 0, 262157, 86, 0, 262158, 88, 0, 262159, 88, 0, 262160, 88, 0, 262161, 88, 0, 262162, 88, 0, 262163, 88, 0, 262164, 88, 0, 262165, 88, 0, 262166, 88, 0, 262167, 88, 0, 262168, 74, 0, 327681, 86, 0, 327682, 86, 0, 327683, 86, 0, 327684, 86, 0, 327685, 86, 0, 327686, 86, 0, 327687, 86, 0, 327688, 86, 0, 327689, 86, 0, 327690, 86, 0, 327691, 86, 0, 327692, 86, 0, 327693, 86, 0, 327694, 88, 0, 327695, 88, 0, 327696, 88, 0, 327697, 88, 0, 327698, 88, 0, 327699, 88, 0, 327700, 88, 0, 327701, 88, 0, 327702, 88, 0, 327703, 88, 0, 327704, 74, 0, 393217, 86, 0, 393218, 86, 0, 393219, 86, 0, 393220, 86, 0, 393221, 86, 0, 393222, 86, 0, 393223, 86, 0, 393224, 86, 0, 393225, 86, 0, 393226, 86, 0, 393227, 86, 0, 393228, 86, 0, 393229, 86, 0, 393230, 74, 0, 393231, 88, 0, 393232, 88, 0, 393233, 88, 0, 393234, 88, 0, 393235, 88, 0, 393236, 88, 0, 393237, 88, 0, 393238, 88, 0, 393239, 88, 0, 393240, 74, 0, 458752, 73, 0, 458753, 86, 0, 458754, 86, 0, 458755, 86, 0, 458756, 86, 0, 458757, 56, 0, 458758, 86, 0, 458759, 86, 0, 458760, 86, 0, 458761, 86, 0, 458762, 86, 0, 458763, 86, 0, 458764, 86, 0, 458765, 86, 0, 458766, 74, 0, 458767, 88, 0, 458768, 88, 0, 458769, 88, 0, 458770, 88, 0, 458771, 88, 0, 458772, 88, 0, 458773, 88, 0, 458774, 88, 0, 458775, 88, 0, 458776, 74, 0, 524288, 73, 0, 524289, 86, 0, 524290, 86, 0, 524291, 86, 0, 524292, 86, 0, 524293, 86, 0, 524294, 86, 0, 524295, 86, 0, 524296, 86, 0, 524297, 86, 0, 524298, 86, 0, 524299, 86, 0, 524300, 86, 0, 524301, 86, 0, 524302, 74, 0, 524303, 88, 0, 524304, 88, 0, 524305, 88, 0, 524306, 88, 0, 524307, 88, 0, 524308, 88, 0, 524309, 88, 0, 524310, 88, 0, 524311, 88, 0, 524312, 74, 0, 589824, 73, 0, 589825, 86, 0, 589826, 86, 0, 589827, 86, 0, 589828, 86, 0, 589829, 86, 0, 589830, 86, 0, 589831, 86, 0, 589832, 86, 0, 589833, 86, 0, 589834, 86, 0, 589835, 86, 0, 589836, 86, 0, 589837, 86, 0, 589838, 74, 0, 589839, 65, 0, 589840, 65, 0, 589841, 65, 0, 589842, 65, 0, 589843, 65, 0, 589844, 65, 0, 589845, 65, 0, 589846, 65, 0, 589847, 65, 0, 589848, 74, 0, 655360, 73, 0, 655361, 86, 0, 655362, 86, 0, 655363, 86, 0, 655364, 86, 0, 655365, 86, 0, 655366, 86, 0, 655367, 86, 0, 655368, 86, 0, 655369, 86, 0, 655370, 86, 0, 655371, 86, 0, 655372, 86, 0, 655373, 86, 0, 655374, 74, 0, 655375, 66, 0, 655376, 66, 0, 655377, 66, 0, 655378, 66, 0, 655379, 66, 0, 655380, 66, 0, 655381, 66, 0, 655382, 66, 0, 655383, 66, 0, 655384, 74, 0, 720896, 73, 0, 720897, 64, 0, 720898, 64, 0, 720899, 64, 0, 720900, 64, 0, 720901, 64, 0, 720902, 64, 0, 720903, 64, 0, 720904, 86, 0, 720905, 64, 0, 720906, 64, 0, 720907, 64, 0, 720908, 64, 0, 720909, 65, 0, 720910, 74, 0, 720911, 87, 0, 720912, 87, 0, 720913, 87, 0, 720914, 87, 0, 720915, 87, 0, 720916, 87, 0, 720917, 87, 0, 720918, 87, 0, 720919, 87, 0, 720920, 74, 0, 786432, 73, 0, 786433, 66, 0, 786434, 66, 0, 786435, 66, 0, 786436, 66, 0, 786437, 66, 0, 786438, 66, 0, 786439, 66, 0, 786440, 86, 0, 786441, 86, 0, 786442, 86, 0, 786443, 49, 0, 786444, 49, 0, 786445, 66, 0, 786446, 74, 0, 786447, 87, 0, 786448, 87, 0, 786449, 87, 0, 786450, 87, 0, 786451, 87, 0, 786452, 87, 0, 786453, 87, 0, 786454, 87, 0, 786455, 87, 0, 786456, 74, 0, 851968, 73, 0, 851969, 86, 0, 851970, 86, 0, 851971, 86, 0, 851972, 86, 0, 851973, 86, 0, 851974, 86, 0, 851975, 86, 0, 851976, 86, 0, 851977, 86, 0, 851978, 86, 0, 851979, 86, 0, 851980, 86, 0, 851981, 86, 0, 851982, 74, 0, 851983, 87, 0, 851984, 87, 0, 851985, 87, 0, 851986, 87, 0, 851987, 87, 0, 851988, 87, 0, 851989, 87, 0, 851990, 87, 0, 851991, 87, 0, 851992, 74, 0, 917504, 73, 0, 917505, 86, 0, 917506, 86, 0, 917507, 86, 0, 917508, 86, 0, 917509, 86, 0, 917510, 86, 0, 917511, 86, 0, 917512, 86, 0, 917513, 86, 0, 917514, 86, 0, 917515, 86, 0, 917516, 86, 0, 917517, 86, 0, 917518, 74, 0, 917519, 65, 0, 917520, 65, 0, 917521, 65, 0, 917522, 65, 0, 917523, 65, 0, 917524, 65, 0, 917525, 65, 0, 917526, 87, 0, 917527, 87, 0, 917528, 74, 0, 983040, 73, 0, 983041, 86, 0, 983042, 86, 0, 983043, 86, 0, 983044, 86, 0, 983045, 86, 0, 983046, 86, 0, 983047, 86, 0, 983048, 86, 0, 983049, 86, 0, 983050, 86, 0, 983051, 86, 0, 983052, 86, 0, 983053, 86, 0, 983054, 74, 0, 983055, 66, 0, 983056, 66, 0, 983057, 66, 0, 983058, 66, 0, 983059, 66, 0, 983060, 66, 0, 983061, 66, 0, 983062, 87, 0, 983063, 87, 0, 983064, 74, 0, 1048576, 73, 0, 1048577, 86, 0, 1048578, 86, 0, 1048579, 86, 0, 1048580, 86, 0, 1048581, 86, 0, 1048582, 86, 0, 1048583, 86, 0, 1048584, 86, 0, 1048585, 86, 0, 1048586, 86, 0, 1048587, 86, 0, 1048588, 86, 0, 1048589, 86, 0, 1048590, 87, 0, 1048591, 87, 0, 1048592, 87, 0, 1048593, 87, 0, 1048594, 87, 0, 1048595, 87, 0, 1048596, 87, 0, 1048597, 87, 0, 1048598, 87, 0, 1048599, 87, 0, 1048600, 74, 0, 1114112, 73, 0, 1114113, 86, 0, 1114114, 86, 0, 1114115, 86, 0, 1114116, 86, 0, 1114117, 86, 0, 1114118, 86, 0, 1114119, 86, 0, 1114120, 86, 0, 1114121, 86, 0, 1114122, 86, 0, 1114123, 86, 0, 1114124, 86, 0, 1114125, 86, 0, 1114126, 87, 0, 1114127, 87, 0, 1114128, 87, 0, 1114129, 87, 0, 1114130, 87, 0, 1114131, 87, 0, 1114132, 87, 0, 1114133, 87, 0, 1114134, 87, 0, 1114135, 87, 0, 1114136, 74, 0, 1179648, 73, 0, 1179649, 86, 0, 1179650, 86, 0, 1179651, 86, 0, 1179652, 86, 0, 1179653, 86, 0, 1179654, 86, 0, 1179655, 86, 0, 1179656, 86, 0, 1179657, 86, 0, 1179658, 86, 0, 1179659, 86, 0, 1179660, 86, 0, 1179661, 86, 0, 1179662, 87, 0, 1179663, 87, 0, 1179664, 87, 0, 1179665, 87, 0, 1179666, 87, 0, 1179667, 87, 0, 1179668, 87, 0, 1179669, 87, 0, 1179670, 87, 0, 1179671, 87, 0, 1179672, 74, 0, 1245184, 76, 0, 1245185, 75, 0, 1245186, 75, 0, 1245187, 75, 0, 1245188, 75, 0, 1245189, 75, 0, 1245190, 75, 0, 1245191, 75, 0, 1245192, 75, 0, 1245193, 75, 0, 1245194, 75, 0, 1245195, 75, 0, 1245196, 75, 0, 1245197, 75, 0, 1245198, 75, 0, 1245199, 75, 0, 1245200, 75, 0, 1245201, 75, 0, 1245202, 75, 0, 1245203, 75, 0, 1245204, 75, 0, 1245205, 75, 0, 1245206, 75, 0, 1245207, 75, 0, 1245208, 77, 0 )
 
 [node name="Furniture" type="TileMap" parent="."]
 tile_set = SubResource( 15 )

@@ -22,6 +22,9 @@ func item_picked_up(item_name, quantity):
 
 # Called when TV is toggled by player
 func set_tv_visible():
+	if !GameParameters.isElectricityOn:
+		television.display_off()
+
 	if television.visible:
 		television.visible = false
 		player.canMove = true
@@ -32,6 +35,9 @@ func set_tv_visible():
 
 # Called when Computer is toggled by player
 func set_computer_visible():
+	if !GameParameters.isElectricityOn:
+		computer.display_off()
+	
 	if computer.visible:
 		computer.visible = false
 		player.canMove = true

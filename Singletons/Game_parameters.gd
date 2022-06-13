@@ -9,9 +9,9 @@ var stress = 0 setget modify_stress
 var danger = 0 setget modify_danger
 var hunger = 0 setget modify_hunger
 
-var dangerIncrease = 1
-var stressIncrease = 1.25
-var hungerIncrease = 1.5
+var dangerIncrease = 0
+var stressIncrease = 0
+var hungerIncrease = 0
 
 # Advice ID of the library
 var currentId
@@ -29,6 +29,7 @@ var lastVisited = "Apartment"
 # Apartment parameters
 var isGason = true
 var isElectricityOn = true
+var isWaterOn = true
 
 var taped_windows = [false,false,false]
 

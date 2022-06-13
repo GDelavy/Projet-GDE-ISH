@@ -12,10 +12,13 @@ func _ready():
 func _process(_delta):
 	if canTrigger and !GameParameters.isBathtubFull:
 		if Input.is_action_just_pressed("interact"):
-			owner.ui.show_popup("Bathtub filled", true)
-			animation.play("fill")
-			AudioManager.play("res://Assets/Audio/water.ogg")
-			GameParameters.isBathtubFull = true
+			if GameParameters.isWaterOn:
+				owner.ui.show_popup("Bathtub filled", true)
+				animation.play("fill")
+				AudioManager.play("res://Assets/Audio/water.ogg")
+				GameParameters.isBathtubFull = true
+			else:
+				owner.ui.show_popup("Water has been shut off")
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):

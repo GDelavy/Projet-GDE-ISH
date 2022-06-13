@@ -13,7 +13,10 @@ func _process(_delta):
 				AudioManager.play("res://Assets/Audio/OpenBook.wav")
 				owner.ui.dialog.start_dialog("res://Assets/Dialogs/Library.json")
 				GameParameters.stress -= 15
+				
+				# Skip time
 				Time.start(Time.time_left - 30)
+				
 
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("player"):

@@ -6,6 +6,7 @@ onready var thanksScreen = $ThanksScreen
 onready var wikiScreen = $WikiScreen
 onready var newsScreen = $NewsScreen
 onready var waitScreen = $WaitScreen
+onready var offScreen = $OffScreen
 
 # Labels telling the player if their research made them feel better or worse
 onready var newsScreenLabel = $NewsScreen/Label2
@@ -88,6 +89,7 @@ func Display_Thanks():
 	wikiScreen.visible = false
 	thanksScreen.visible = false
 	waitScreen.visible = true
+	offScreen.visible = false
 
 func display_wiki():
 	newsScreen.visible = false
@@ -96,6 +98,16 @@ func display_wiki():
 	wikiScreen.visible = true
 	thanksScreen.visible = false
 	waitScreen.visible = false
+	offScreen.visible = false
+
+func display_off():
+	newsScreen.visible = false
+	startScreen.visible = false
+	orderScreen.visible = false
+	wikiScreen.visible = false
+	thanksScreen.visible = false
+	waitScreen.visible = false
+	offScreen.visible = true
 
 func reset_display():
 	newsScreen.visible = false
@@ -104,3 +116,4 @@ func reset_display():
 	thanksScreen.visible = false
 	wikiScreen.visible = false
 	waitScreen.visible = false
+	offScreen.visible = false

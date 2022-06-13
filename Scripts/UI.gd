@@ -22,6 +22,8 @@ onready var dialog = $CanvasLayer/Dialog
 onready var clock = $CanvasLayer/ClockPanel/Clock
 
 func _ready():
+	Time.connect("waterShutOff", self, "on_Water_off")
+	Time.connect("electricityShutOff", self, "on_Electricity_off")
 	refresh_inventory()
 	update_bars()
 
@@ -52,9 +54,6 @@ func show_popup(text, isObjective = false):
 	if popupAnim.is_playing():
 		popupAnim.stop()
 	popupAnim.play("Popup")
-
-func display_dialog():
-	pass
 
 func _process(_delta):
 	# Updates clock every frame
@@ -89,3 +88,9 @@ func _on_Timer_timeout():
 				Color(1,1,1,0.91), Color(1,1,1,0), 1.5,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	eventTween.start()
+
+func on_Water_off():
+	show_popup("Water has been shut off")
+
+func on_Eelectricity_off():
+	show_popup("Electricity has been shut off")

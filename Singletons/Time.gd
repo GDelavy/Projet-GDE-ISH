@@ -18,6 +18,9 @@ signal isAfternoon
 signal isEvening
 signal isNight
 
+signal waterShutOff
+signal electricityShutOff
+
 func _ready():
 	# Initialize countdown
 	set_wait_time(countdownTime)
@@ -45,6 +48,19 @@ func _process(_delta):
 		if timeInMinutes == 1 and timeInSeconds == 0:
 			emit_signal("isNight")
 			currentTime = "Night"
+			
+		# Water has been shut off
+		if timeInMinutes == 3 and timeInSeconds == 30:
+			if GameParameters.isWaterOn:
+				emit_signal("waterShutOff")
+			GameParameters.isWaterOn = false
+			
+		# Electricity has been shut off
+		if timeInMinutes == 2 and timeInSeconds == 30:
+			if GameParameters.isElectricityOn:
+				emit_signal("electricityShutOff")
+			GameParameters.isElectricityOn = false
+			
 	else:
 		time = 0
 		
@@ -62,3 +78,24 @@ func clock_timer():
 	time = int(get_time_left())
 	timeInSeconds = time % 60
 	timeInMinutes = (time/60) % 60
+
+# Makes sure that timeskips don't skip events (color change, current down, etc)
+func check_time_skip_signals(original_time):
+	# If skipped time change
+	if original_time > 180 and time < 180:
+		emit_signal("isAfternoon")
+		currentTime = "Afternoon"
+	elif original_time > 120 and time < 120:
+		emit_signal("isEvening")
+		currentTime = "Evening"
+	elif original_time > 60 and time < 60:
+		emit_signal("isNight")
+		currentTime = "Night"
+
+	# If skipped water shut off
+	if original_time > 210 and time < 210:
+		emit_signal("waterShutOff")
+		GameParameters.isWaterOn = false
+	elif original_time > 150 and time < 150:
+		emit_signal("electricityShutOff")
+		GameParameters.isElectricityOn = false

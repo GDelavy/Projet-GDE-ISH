@@ -58,26 +58,32 @@ func _on_News_pressed():
 
 func _on_Food_pressed():
 	GameParameters.currentOrder = "Raw Food"
+	GameParameters.currentQuantity = 3
 	Display_Thanks()
 
 func _on_Batteries_pressed():
-	GameParameters.currentOrder = "Batteries"
+	GameParameters.currentOrder = "Water Bottles"
+	GameParameters.currentQuantity = 20
 	Display_Thanks()
 
 func _on_Rations_pressed():
 	GameParameters.currentOrder = "Rations"
+	GameParameters.currentQuantity = 15
 	Display_Thanks()
 
 func _on_Candy_pressed():
 	GameParameters.currentOrder = "Candies"
+	GameParameters.currentQuantity = 10
 	Display_Thanks()
 
 func _on_PowerKit_pressed():
-	GameParameters.currentOrder = "PowerKit"
+	GameParameters.currentOrder = "Power Kit"
+	GameParameters.currentQuantity = 1
 	Display_Thanks()
 
 func _on_MedKit_pressed():
 	GameParameters.currentOrder = "Medkit"
+	GameParameters.currentQuantity = 1
 	Display_Thanks()
 
 func Display_Thanks():

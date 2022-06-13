@@ -9,13 +9,15 @@ var stress = 0 setget modify_stress
 var danger = 0 setget modify_danger
 var hunger = 0 setget modify_hunger
 
-var dangerIncrease = 0
-var stressIncrease = 0
-var hungerIncrease = 0
+var dangerIncrease = 1
+var stressIncrease = 1.25
+var hungerIncrease = 1.5
 
 # Advice ID of the library
 var currentId
-var adviceId = [0,1,2,3,4]
+var adviceId = [0,1,2,3,4,5]
+# Used when the player has cycled through all the advices
+var completeAdviceId = [0,1,2,3,4,5]
 var dialog_path
 
 # Used when player orders items on the computer
@@ -34,22 +36,22 @@ var isWaterOn = true
 var taped_windows = [false,false,false]
 
 # Completion marks
-var completedObjectives = 0
-var totalObjectives = 10
+var completedObjectives = 0 setget is_won
+var totalObjectives = 7
 
 var hasDuctTape = false
 var hasToolkit = false
+var isCarBatteryOut = false
+var isBasementMedkitTaken = false
+var isBathtubFull = false
 
 var isElectricityRestored = false
-var isGasRestored = false
-var isBathtubFull = false
+var isWaterAvailable = false
 var isPassportSafe = false
 var isClothingReady = false
 var areWindowsSafe = false
 var hasMedkit = false
-var isCarBatteryOut = false
 var areRationsAvailable = false
-var areValuablesSafe = false
 
 # Randomizes seed so each run will give different random numbers
 func _ready():
@@ -87,7 +89,12 @@ func modify_hunger(value):
 		hunger = 0
 
 func choose_random_dialog():
-	currentId = adviceId[randi() % adviceId.size()]
+	if adviceId.size() > 0:
+		currentId = adviceId[randi() % adviceId.size()]
+	# In case the player has cycled through all the advices
+	else:
+		currentId = completeAdviceId[randi() % completeAdviceId.size()]
+
 	dialog_path = "res://Assets/Dialogs/Dialog" + str(currentId) +".json"
 
 func check_if_all_windows_taped():
@@ -95,3 +102,8 @@ func check_if_all_windows_taped():
 		if window == false:
 			return false
 	return true
+
+func is_won(value):
+	completedObjectives = value
+	if completedObjectives == totalObjectives:
+		get_tree().change_scene("res://World/GameOver.tscn")

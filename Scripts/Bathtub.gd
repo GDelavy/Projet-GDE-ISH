@@ -13,10 +13,12 @@ func _process(_delta):
 	if canTrigger and !GameParameters.isBathtubFull:
 		if Input.is_action_just_pressed("interact"):
 			if GameParameters.isWaterOn:
-				owner.ui.show_popup("Bathtub filled", true)
 				animation.play("fill")
 				AudioManager.play("res://Assets/Audio/water.ogg")
 				GameParameters.isBathtubFull = true
+				GameParameters.isWaterAvailable = true
+				if !GameParameters.items.has("Water Bottles"):
+					owner.ui.show_popup("Acquired reserve of water", true)
 			else:
 				owner.ui.show_popup("Water has been shut off")
 

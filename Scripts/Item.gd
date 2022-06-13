@@ -20,6 +20,20 @@ func _process(_delta):
 		if canTrigger:
 			if Input.is_action_just_pressed("interact"):
 				get_parent().item_picked_up(item_name, quantity)
+				if item_name == "Water Bottles":
+					if !GameParameters.isBathtubFull:
+						GameParameters.isWaterAvailable = true
+						get_parent().ui.show_popup("Acquired reserve of water", true)
+				elif item_name == "Rations":
+					if !GameParameters.areRationsAvailable:
+						GameParameters.areRationsAvailable = true
+						get_parent().ui.show_popup("Acquired rations", true)
+				elif item_name == "Medkit":
+					if !GameParameters.hasMedkit:
+						GameParameters.hasMedkit = true
+						get_parent().ui.show_popup("Medkit Acquired", true)
+						
+					
 				queue_free()
 
 func _on_Item_body_entered(body):

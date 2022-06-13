@@ -41,37 +41,6 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="Animation" id=35]
-resource_name = "Popup"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 8, 552 ), Vector2( 8, 488 ), Vector2( 8, 488 ), Vector2( 8, 552 ) ]
-}
-
-[sub_resource type="Animation" id=36]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 8, 552 ) ]
-}
-
 [sub_resource type="Animation" id=37]
 resource_name = "Bob"
 loop = true
@@ -101,6 +70,37 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 752, 120 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "Popup"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8, 552 ), Vector2( 8, 488 ), Vector2( 8, 488 ), Vector2( 8, 552 ) ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8, 552 ) ]
 }
 
 [node name="UI" type="Control"]
@@ -283,7 +283,7 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -152.0
+margin_left = -184.0
 margin_top = -300.0
 margin_right = -8.0
 margin_bottom = -12.0
@@ -295,7 +295,7 @@ __meta__ = {
 [node name="Inventory" type="VBoxContainer" parent="CanvasLayer/Panel"]
 margin_left = 8.0
 margin_top = 40.0
-margin_right = 136.0
+margin_right = 168.0
 margin_bottom = 280.0
 custom_constants/separation = 5
 __meta__ = {
@@ -303,94 +303,68 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel/Inventory"]
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 21.0
 theme = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 26.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 47.0
 theme = ExtResource( 5 )
 
 [node name="Label3" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 52.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 73.0
 theme = ExtResource( 5 )
 
 [node name="Label4" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 78.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 99.0
 theme = ExtResource( 5 )
 
 [node name="Label5" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 104.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 125.0
 theme = ExtResource( 5 )
 
 [node name="Label6" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 130.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 151.0
 theme = ExtResource( 5 )
 
 [node name="Label7" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 156.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 177.0
 theme = ExtResource( 5 )
 
 [node name="Label8" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 182.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 203.0
 theme = ExtResource( 5 )
 
 [node name="Label9" type="Label" parent="CanvasLayer/Panel/Inventory"]
 margin_top = 208.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 229.0
 theme = ExtResource( 5 )
 
 [node name="InventoryText" type="Label" parent="CanvasLayer/Panel"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 136.0
+margin_right = 168.0
 margin_bottom = 29.0
 text = "Inventory"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Popup" type="Panel" parent="CanvasLayer"]
-margin_left = 8.0
-margin_top = 552.0
-margin_right = 320.0
-margin_bottom = 592.0
-theme = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CanvasLayer/Popup"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 304.0
-margin_bottom = 32.0
-text = "Bathtub filled up (1/13)"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Popup"]
-anims/Popup = SubResource( 35 )
-anims/RESET = SubResource( 36 )
 
 [node name="Dialog" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -424,6 +398,32 @@ anims/Bob = SubResource( 37 )
 anims/RESET = SubResource( 38 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Dialog"]
+
+[node name="Popup" type="Panel" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 552.0
+margin_right = 320.0
+margin_bottom = 592.0
+theme = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Popup"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 304.0
+margin_bottom = 32.0
+text = "Bathtub filled up (1/13)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Popup"]
+anims/Popup = SubResource( 35 )
+anims/RESET = SubResource( 36 )
 
 [connection signal="timeout" from="CanvasLayer/EventPanel/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Danger/DangerTimer" to="." method="_on_DangerTimer_timeout"]
